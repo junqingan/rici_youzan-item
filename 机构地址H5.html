@@ -1,0 +1,912 @@
+<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&amp;ak=lW2BSHq1fiRGcqOSzW0F9GGGOkUcbGro&amp;s=1&amp;t=20190712024058"></script>
+<style>
+           .jgdz-box{width:100%;padding:0 2%;overflow:hidden;box-sizing:border-box;}
+           #search_input{margin:3% 5%;width:90%;height:40px;line-height:40px;font-size:14px;color:#333;text-align:left;padding-left:10px;border:1px solid #999;border-radius:3px;box-sizing:border-box;outline:none}
+           #search_list{margin:10px 0;}
+           #search_list .store{margin:10px 0;border:1px #019faa;border-style:dashed;}
+           .store__header{height:37px;line-height:37px;margin:0 10px;position:relative;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:16px;font-weight:600;color:#333;}
+           .name-f{height:24px;line-height:24px;color:#999;font-size:14px;margin:0 10px;}
+           .store__info{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:flex;padding:8px 10px;}
+           .store__thumb{width:100px;height:60px;text-align:center;position:relative;}
+           .store__thumb img{margin:auto;width:auto;height:auto;max-width:100%;max-height:100%;position:absolute;top:0;left:0;right:0;bottom:0;}
+           .store__detail{-webkit-box-flex:1;-webkit-flex:1;-moz-box-flex:1;flex:1;font-size:12px;line-height:16px;color:#999;margin-left:10px;}
+           .store__detail__address{margin-top:1px;color:#333;font-size:12px;line-height:16px;}
+           .store__detail__time{position:relative;margin:5px 0 2px;font-size:12px;line-height:16px;}
+       </style>
+   
+   
+
+       <div class="jgdz-box">
+       </div>
+       <div class="jgdz-box"><input class="search_input" id="search_input" placeholder="请输入门店名称或所在省、市、区县">
+           <p style="width:100%;line-height: 26px;text-align: center;border-radius: 5px;color: #ffffff;margin: 0;font-size: 14px;background: #019faa;">淡旺季体检机构休息日会做相关调整，具体请以4001688188预约电话为准</p>
+           <div id="search_list">
+               <div class="store">
+                   <div class="store__header">上海瑞慈松江体检中心</div>
+                   <p class="name-f">上海瑞慈瑞泽门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb">
+                           <img src="https://www.ruicitijian.com/public/images/29/48/2e/1776fa8d7993de5e262044ac8a2103e5e96e84fc.png?v995e">
+                       </div>
+                       <a href="JavaScript:;" class="store__detail">
+                           <h3 class="store__detail__address">上海市松江区方塔北路605号企德天地</h3>
+                           <p class="store__detail__time">周四休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">上海瑞慈漕河泾体检中心</div>
+                   <p class="name-f">上海瑞慈瑞泰门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/7a/20/6f/d10bffb0c009f89950a844ba5be4021baddc5cb6.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">上海市徐汇区宜山路1388号民润大厦3楼</h3>
+                       <p class="store__detail__time">周三休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">上海瑞慈张江体检中心</div>
+                   <p class="name-f">上海瑞慈瑞宁门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/08/5a/75/c79d0e7a68a4f9a108f7202f1db7cd9ec09fd8b4.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">上海市浦东新区张江高科技园区张东路1388号15号楼</h3>
+                       <p class="store__detail__time">周三休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">上海瑞慈金桥体检中心</div>
+                   <p class="name-f">上海瑞慈瑞荞门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/2a/10/01/76a1d2fd2e1aa7732ebdadb4f1eb6cc8c1667827.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">上海市浦东新区金皖路199号A栋裙楼2-4层</h3>
+                       <p class="store__detail__time">周四休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       上海瑞慈普陀体检中心
+                   </div>
+                   <p class="name-f">上海瑞慈瑞兆门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/5e/15/df/03e85e7c292ac645f9f8a7a2636d1d18739f5174.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">上海市普陀区金沙江路1628弄绿洲中环中心商务广场7号楼2楼</h3>
+                       <p class="store__detail__time">周一休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       上海瑞慈杨浦体检中心
+                   </div>
+                   <p class="name-f">上海瑞慈瑞杰门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/f7/db/ea/bd4c95616a5b513a54a92355af3c938b3f7332bc.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">上海市杨浦区国定路323号3号楼创业大厦13层</h3>
+                       <p class="store__detail__time">周四休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       上海瑞慈徐汇体检中心
+                   </div>
+                   <p class="name-f">上海瑞慈瑞鑫门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/b2/9d/98/66649b757a650fc5ebb28d4a0df35c111d4a5024.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">上海市徐汇区斜土路2899号光启文化广场B栋7层</h3>
+                       <p class="store__detail__time">周二休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       上海瑞慈福山路体检中心
+                   </div>
+                   <p class="name-f">上海瑞慈瑞锦门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/bc/96/b2/4f8c666b7ccb353fdc1de8ff018297e9fbd95cd6.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">上海市浦东新区福山路450号新天国际大厦2层A-D室</h3>
+                       <p class="store__detail__time">周二休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       上海瑞慈静安体检中心
+                   </div>
+                   <p class="name-f">上海瑞慈瑞铂门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/0b/fa/2d/ecb146bd274348e5545cd616642d12fbf72c253b.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">上海市静安区江宁路212号</h3>
+                       <p class="store__detail__time">无休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       上海瑞慈陆家嘴体检中心
+                   </div>
+                   <p class="name-f">上海瑞慈门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/6c/e2/ca/af97285fd0f0527c24b78b8fe636ece86763189e.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">上海市浦东新区浦东南路256号华夏银行大厦3层</h3>
+                       <p class="store__detail__time">周一休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       上海瑞慈宝山体检中心
+                   </div>
+                   <p class="name-f">上海瑞慈瑞山门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/da/20/8a/c243befc9f973de943779ee655ef8707115814c4.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">宝山区共和新路4727号新陆国际商务大厦11/12楼</h3>
+                       <p class="store__detail__time">周三休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       上海瑞慈嘉定体检中心
+                   </div>
+                   <p class="name-f">上海瑞慈瑞隆门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/da/20/8a/c243befc9f973de943779ee655ef8707115814c4.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">上海市嘉定区永盛路1190号一层A2区、二层、三层B区</h3>
+                       <p class="store__detail__time">周二休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       上海瑞慈奉贤体检中心
+                   </div>
+                   <p class="name-f">上海瑞慈瑞辕门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/fc/30/f7/c5f71e631c8f1d116864054a3de4fd803f2a4941.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">上海市奉贤区金海公路6055号33号楼</h3>
+                       <p class="store__detail__time">周三休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       上海瑞慈青浦体检中心
+                   </div>
+                   <p class="name-f">上海瑞慈瑞青门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/0e/5e/7c/810221e5df0219e217247dfeee2e5ee47b36ed1e.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">上海市青浦区上海市青浦区公园东路1289弄26号3-6层</h3>
+                       <p class="store__detail__time">周二休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       上海瑞慈闵行体检中心
+                   </div>
+                   <p class="name-f">上海瑞慈瑞闵门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/0b/55/2a/d40b854888867e61a41172c940d2f295cf7b12b9.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">上海市闵行区七莘路2099号1-2楼</h3>
+                       <p class="store__detail__time">周四休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       泉州瑞慈晋江体检中心
+                   </div>
+                   <p class="name-f">晋江瑞慈瑞泉门诊部服务</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/12/56/61/2bea12961af468448a7abb059ebc5eeba0f6207e.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">泉州市晋江市池店镇泉商环球广场2楼瑞慈体检（希尔顿酒店大堂对面）</h3>
+                       <p class="store__detail__time">周一休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       合肥瑞慈高新区体检中心
+                   </div>
+                   <p class="name-f">合肥高新区瑞慈瑞合综合门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/13/20/64/dc19debf2d131839f12c19f09319b5649d28fa23.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">合肥市高新区（创新大道与彩虹路交口）创新国际大厦4楼</h3>
+                       <p class="store__detail__time">周二休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       内江瑞慈体检中心
+                   </div>
+                   <p class="name-f">内江瑞慈瑞川门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/42/09/b5/cc42c397681230432c045751a07aca06f21f82a4.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">四川省内江市市中区甜城大道内江商贸城建材b馆4楼</h3>
+                       <p class="store__detail__time">
+                           无休息
+                       </p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       青岛瑞慈体检中心
+                   </div>
+                   <p class="name-f">青岛瑞慈瑞城健康管理有限公司市南门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/b9/6b/d9/3aa46e8bf6e326a5ac5ef9288e0d3f9a84708652.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">青岛市市南区闽江路2号国华大厦4楼</h3>
+                       <p class="store__detail__time">
+                           周一休息
+                       </p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       济南瑞慈体检中心
+                   </div>
+                   <p class="name-f">济南瑞慈瑞济门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/db/e2/db/a9254c8dd16bb7bd002ffc454bce0d7cdbd22461.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">济南市历城区辛祝路81号夏都金地商业广场2楼</h3>
+                       <p class="store__detail__time">
+                           周一休息
+                       </p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       四川遂宁瑞慈体检中心
+                   </div>
+                   <p class="name-f">遂宁瑞慈瑞邦门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/56/21/7f/691c9f0239729ac8fe654a0bada36779f4b176f2.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">四川省遂宁市船山区和平西路225号4层</h3>
+                       <p class="store__detail__time">
+                           周日休息
+                       </p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       湖州瑞慈体检中心
+                   </div>
+                   <p class="name-f">湖州瑞慈瑞湖门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/94/30/9e/232131e8f6be15db0b6349aee332c1182722747d.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">浙江省湖州市吴兴区爱山广场6号楼3-4F</h3>
+                       <p class="store__detail__time">
+                           周一休息
+                       </p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       武汉瑞慈武昌体检中心
+                   </div>
+                   <p class="name-f">武汉瑞慈瑞岳综合门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/38/61/9e/f51a0403d7b0b4afeda9efc35d81def5f12a47f4.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">武汉市武昌区徐东路50号（山河企业大厦5楼）</h3>
+                       <p class="store__detail__time">
+                           周一休息
+                       </p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       南通瑞慈北大街体检中心
+                   </div>
+                   <p class="name-f">南通瑞慈瑞兴门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/9b/c2/cd/8e35ef89a7c1b0f57df31119e86e89a524e77acb.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">南通市港闸区永和路588号绿洲国际商务城B幢201室及3层</h3>
+                       <p class="store__detail__time">周四休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       长沙瑞慈天心体检中心
+                   </div>
+                   <p class="name-f">长沙瑞上健康管理有限公司瑞慈天心门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/68/7d/f6/ad76f61112173a6b602592b7b2afd10b798da887.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">湖南省长沙市天心区友谊路413号运成大厦204房</h3>
+                       <p class="store__detail__time">周日休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       南京瑞慈建邺体检中心
+                   </div>
+                   <p class="name-f">南京瑞慈瑞祥门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/d0/12/fa/a95b8c0f5aff97c319d5af92ed2233cde6cbda76.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">南京市建邺区云龙山路99号省建大厦A、B栋1-2F</h3>
+                       <p class="store__detail__time">
+                           周日休息
+                       </p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       南京瑞慈江北体检中心
+                   </div>
+                   <p class="name-f">南京瑞慈门诊部有限责任公司</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/a7/95/1f/d808a0e9e3101f04349223eb7a3b955c44f6daf5.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">南京市江北新区大桥北路48号弘阳家居南京桥北店（宜必思酒店弘阳店）A4馆5层</h3>
+                       <p class="store__detail__time">
+                           周一休息
+                       </p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       瑞慈盐城体检中心
+                   </div>
+                   <p class="name-f">盐城瑞慈健康管理有限公司瑞慈健康体检中心</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/23/80/13/bd91a17081f437bc7c85f53e1137c81c34523862.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">盐城市世纪大道611号（解放路与世纪大道交叉口）凤凰金宝广场商场5楼（商场2号门电梯直达5楼）</h3>
+                       <p class="store__detail__time">
+                           周一休息
+                       </p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       瑞慈淮安体检中心
+                   </div>
+                   <p class="name-f">淮安瑞慈瑞茂健康体检中心</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/03/c5/75/b315f40a8830918c4d9f3fa0e73af79670e9fd39.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">淮安经济技术开发区深圳路6号金鑫国际广场1号楼2、3楼</h3>
+                       <p class="store__detail__time">
+                           周一休息
+                       </p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       瑞慈宿迁体检中心
+                   </div>
+                   <p class="name-f">宿迁瑞慈瑞谦门诊部有限公司</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/73/2e/3d/1c5bdc769ea794f44a6c3215350aead743af2867.png">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">宿迁市宿城区洪泽湖西路88号恒力大酒店南辅楼二楼三楼</h3>
+                       <p class="store__detail__time">
+                           周一休息
+                       </p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                <div class="store__header">
+                    泰州瑞慈体检中心
+                </div>
+                <p class="name-f">泰州瑞慈瑞新健康体检中心有限公司</p>
+                <div class="store__info">
+                    <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/1f/f9/e9/84c85808fb62a2de78e7297d98597a9a10195975.jpg">
+                    </div><a href="JavaScript:;" class="store__detail">
+                    <h3 class="store__detail__address">江苏省泰州市海陵区永定路288号金融广场1号楼3-4层</h3>
+                    <p class="store__detail__time">
+                        周一休息
+                    </p>
+                    </a>
+                </div>
+            </div>
+               <div class="store">
+                   <div class="store__header">
+                       佛山瑞慈体检中心
+                   </div>
+                   <p class="name-f">佛山瑞慈瑞佛门诊部有限公司</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/ed/52/a7/54b2ca776c7303b1893d8ecd57097017e636d38f.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">广东省佛山市禅城区汾江南路18号雅庭国际广场5层（走地铁a出口）</h3>
+                       <p class="store__detail__time">
+                           周一休息
+                       </p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       厦门瑞慈体检中心
+                   </div>
+                   <p class="name-f">厦门思明瑞慈瑞思门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/5d/89/5e/c5d1bc3866d3fff9a7a4ef738bac20f9411f5e1a.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">厦门思明区前埔路508号国金广场C座2层</h3>
+                       <p class="store__detail__time">周一休息 </p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       沈阳瑞慈铁西体检中心
+                   </div>
+                   <p class="name-f">沈阳瑞慈瑞沈铁西综合门诊部有限公司</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/3e/a2/37/e1b9218a47395fb8f23f100f18eaf21ce209a4a6.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">沈阳市铁西区兴工北街53号瀚都国际大厦3-4层</h3>
+                       <p class="store__detail__time">周一休息 </p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       长沙瑞慈芙蓉体检中心
+                   </div>
+                   <p class="name-f">长沙瑞上健康管理有限公司瑞慈芙蓉门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/80/f9/2d/cd1570b46829d3d13251974b140610fcf0684e9e.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">湖南省长沙市五一路65号长沙大厦2楼</h3>
+                       <p class="store__detail__time">周一休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       成都温江瑞慈体检中心
+                   </div>
+                   <p class="name-f">成都温江瑞慈瑞文门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/51/16/9b/baecb28316edbf499086d0d7aef27c8d880261d7.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">成都市温江区光华大道三段1588号珠江国际写字楼8层</h3>
+                       <p class="store__detail__time">周一休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       镇江瑞慈体检中心
+                   </div>
+                   <p class="name-f">京口瑞慈瑞润体检中心</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/6f/5b/71/026b1c00491cac732b6ec7c0c47e01a5641a06bc.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">江苏省镇江市京口区解放路26号东大院05栋4-5层</h3>
+                       <p class="store__detail__time">周一休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       徐州瑞徐体检中心
+                   </div>
+                   <p class="name-f">徐州瑞慈瑞徐体检门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/a3/0d/5d/922ba71811736e6ae8b425a4a2a99a456383c518.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">徐州市解放路246号文峰大厦4层</h3>
+                       <p class="store__detail__time">周一休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       徐州瑞彭体检中心
+                   </div>
+                   <p class="name-f">徐州瑞彭体检中心</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/b9/b4/b9/0de79f1769dceb7d82aeb854c37bff1c0a039330.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">徐州市云龙区庆丰路10号云龙华府商业A2座3楼</h3>
+                       <p class="store__detail__time">周二休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       无锡瑞慈滨湖体检中心
+                   </div>
+                   <p class="name-f">无锡瑞慈瑞锡门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/be/ea/61/7929fa456ad5d84c2d348ed39afd005bb4c70bfe.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">无锡市滨湖区湖滨路688号华东大厦（裙楼）2层</h3>
+                       <p class="store__detail__time">周一休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       常州瑞慈新北区体检中心
+                   </div>
+                   <p class="name-f">常州瑞慈医疗门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/cd/c4/07/2075ecae0d630bc3d6d0aae085e8c89498580ba6.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">常州市新北区龙锦路1590号现代传媒中心3号楼5层(近太湖东路)</h3>
+                       <p class="store__detail__time">周一休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       常州瑞慈武进体检中心
+                   </div>
+                   <p class="name-f">常州武进瑞慈瑞曜综合门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/cb/59/d5/5558460529ae7d7e4bc9234caccc81e8b1819baf.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">常州市武进区延政中路5号常发大厦裙楼3楼</h3>
+                       <p class="store__detail__time">周二休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       扬州瑞扬体检中心
+                   </div>
+                   <p class="name-f">扬州瑞慈瑞扬中西医结合门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/53/ff/0b/d148881c645295aa1c66ba597238aefd987a7254.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">扬州市邗江区扬子江北路108号1-2层1003铺</h3>
+                       <p class="store__detail__time">周一休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       扬州瑞韵体检中心
+                   </div>
+                   <p class="name-f">扬州瑞慈瑞韵健康体检有限公司</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/cd/ca/5c/7c171753fef5e949ef0027a13a62a007387e7728.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">扬州市广陵区京杭中路3号6幢101室--2楼3楼（广陵店又名韵河湾店）</h3>
+                       <p class="store__detail__time">周二休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       苏州瑞慈园区体检中心
+                   </div>
+                   <p class="name-f">苏州瑞慈瑞禾门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/5d/c3/2a/74c748d8b3a2cee81bb4c513b3c3c2ee417007dd.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">苏州市工业园区苏州大道西2号国际大厦2F</h3>
+                       <p class="store__detail__time">周二休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       苏州姑苏体检中心
+                   </div>
+                   <p class="name-f">苏州姑苏瑞慈瑞梧健康体检中心</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/66/dc/7a/a80c08d4803fa5ed3fc37dbaaad1d2629bc93740.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">苏州市姑苏区三香路1338号铂金大厦裙楼5层</h3>
+                       <p class="store__detail__time">周三休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       苏州瑞慈高新体检中心
+                   </div>
+                   <p class="name-f">苏州瑞慈门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/99/1e/a9/3e58b9709ac6adfb1af8e8e9fb5d178c1be21374.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">江苏省苏州市高新区珠江路117号创新中心大厦B座4-5层</h3>
+                       <p class="store__detail__time">周一休息 </p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       南京瑞慈秦淮体检中心
+                   </div>
+                   <p class="name-f">南京瑞慈瑞星门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/8a/06/01/1fac06f87067b7a2a0ff71270a6e01b02ed35175.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">江苏省南京市秦淮区太平南路450号斯亚财富中心4层</h3>
+                       <p class="store__detail__time">周一休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       南通瑞慈滨江体检中心
+                   </div>
+                   <p class="name-f">南通瑞慈滨江门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/54/d5/d1/baae995e796a9c5dc329aeaf025bd51265d583b8.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">江苏省南通市崇川区滨江公园休闲新天地1号楼</h3>
+                       <p class="store__detail__time">周一休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       南通瑞慈医院体检中心
+                   </div>
+                   <p class="name-f">南通瑞慈门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/04/ba/87/1832240f3cc45c223179cd3627ca35a779cc111f.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">江苏省南通市崇川区星湖大道2000号瑞慈医院门诊三楼</h3>
+                       <p class="store__detail__time">周三休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       南通瑞慈文峰体检中心
+                   </div>
+                   <p class="name-f">南通瑞慈瑞峰门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/ff/f4/c8/fa292f8badba89abe9c2d157709181458972c14d.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">江苏省南通市崇川区虹桥路1号文峰城市广场9-10层</h3>
+                       <p class="store__detail__time">周二休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       南通通州机构
+                   </div>
+                   <p class="name-f">南通瑞慈瑞运体检中心</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/b9/8b/4d/5f82b2dc79ec7584e6183df69ab2904914c8d3b9.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">南通市通州区金新街道综艺金融港金融街401、402铺</h3>
+                       <p class="store__detail__time">周一休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       深圳机构
+                   </div>
+                   <p class="name-f">深圳瑞慈南山体检中心</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/9e/68/d0/fd21df197f3b26cf0594af681a79a71297a32a21.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">广东省深圳市南山区松坪山路1源兴科技大厦东座4层</h3>
+                       <p class="store__detail__time">周一休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       深圳福田机构
+                   </div>
+                   <p class="name-f">深圳瑞慈瑞洲健康体检中心</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/1c/7b/28/e59ca931b070683e4ea4d5803e69e8fe9a707ebd.png?v995e"></div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">深圳市福田区新洲南路2008号新洲同创汇C座4层</h3>
+                       <p class="store__detail__time">周二休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       广州瑞慈天河体检中心
+                   </div>
+                   <p class="name-f">瑞慈中信医疗门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/c3/eb/f5/b267247655ae3a0bd04ca57fd39addd528303a3f.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">广东省广州市天河区天河北路366号都市华庭3楼</h3>
+                       <p class="store__detail__time">周一休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       广州越秀体检中心
+                   </div>
+                   <p class="name-f">瑞慈瑞穗体检中心</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/5e/38/7c/b8f8d4c2ef97cb1affb53ba2a751400547a814e9.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">广州市越秀区中山五路219号九层01</h3>
+                       <p class="store__detail__time">周二休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       杭州延安体检中心
+                   </div>
+                   <p class="name-f">杭州瑞慈医疗门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/06/19/fd/9ffa119ca5f10a7a34fa6fd86b3542ea5a8f068e.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">杭州市拱墅区延安路468号B座4楼</h3>
+                       <p class="store__detail__time">周一休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       杭州瑞江体检中心
+                   </div>
+                   <p class="name-f">杭州瑞慈瑞江综合门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/89/bc/be/da331f39159222e70cf92e96f020b6926625b2ab.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">杭州市上城区市民街66号钱塘航空大厦4楼401室</h3>
+                       <p class="store__detail__time">周二休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       合肥瑞慈蜀山体检中心
+                   </div>
+                   <p class="name-f">合肥蜀山瑞慈健康体检门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/d1/05/4a/d3bcaac2a95edf53ca3c27d739f962228af1b9e4.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">合肥市蜀山区潜山路与佛子岭路交口东100米 瑞慈医疗A座 （银泰城北门）</h3>
+                       <p class="store__detail__time">周一休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       北京瑞慈三里屯体检中心
+                   </div>
+                   <p class="name-f">北京瑞慈瑞泰综合门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/5f/cb/a2/de9e2a3766a5fe9cf3b104642df6d37cbddfac36.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">北京市朝阳区工体北路8号院三里屯SOHO六号商场3层</h3>
+                       <p class="store__detail__time">周一休息</p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       武汉瑞慈硚口体检中心
+                   </div>
+                   <p class="name-f">武汉瑞慈门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/46/9b/e7/8e2d1bd4b48218f4507c478666b7790e9d5d3eaf.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">湖北省武汉市硚口区汉口沿河大道466号盛世滨江生活汇三层</h3>
+                       <p class="store__detail__time">周一休息 </p>
+                       </a>
+                   </div>
+               </div>
+               <div class="store">
+                   <div class="store__header">
+                       成都瑞慈锦江体检中心
+                   </div>
+                   <p class="name-f">锦江瑞慈门诊部</p>
+                   <div class="store__info">
+                       <div class="store__thumb"><img src="https://www.ruicitijian.com/public/images/b3/c8/63/62249d23aec28baebe4e01642837dae60ec7c0c4.png?v995e">
+                       </div><a href="JavaScript:;" class="store__detail">
+                       <h3 class="store__detail__address">成都市锦江区一环路东五段8号天府国际大厦3-4楼（成都九眼桥北）</h3>
+                       <p class="store__detail__time">周日休息</p>
+                       </a>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+   
+   <script>
+       jQuery.fn.fastLiveFilter = function(list, options) {
+
+           options = options || {};
+           list = jQuery(list);
+           var input = this;
+           var lastFilter = '';
+           var timeout = options.timeout || 0;
+           var callback = options.callback || function() {};
+
+           var keyTimeout;
+
+           var lis = list.children();
+           var len = lis.length;
+           var oldDisplay = len > 0 ? lis[0].style.display : "block";
+           callback(len);
+
+           input.change(function() {
+
+               var filter = input.val().toLowerCase();
+               var li, innerText;
+               var numShown = 0;
+               for (var i = 0; i < len; i++) {
+                   li = lis[i];
+                   innerText = !options.selector ?
+                       (li.textContent || li.innerText || "") :
+                   $(li).find(options.selector).text();
+
+                   if (innerText.toLowerCase().indexOf(filter) >= 0) {
+                       if (li.style.display == "none") {
+                           li.style.display = oldDisplay;
+                       }
+                       numShown++;
+                   } else {
+                       if (li.style.display != "none") {
+                           li.style.display = "none";
+                       }
+                   }
+               }
+               callback(numShown);
+
+               return false;
+           }).keydown(function() {
+               clearTimeout(keyTimeout);
+               keyTimeout = setTimeout(function() {
+                   if (input.val() === lastFilter) return;
+                   lastFilter = input.val();
+                   input.change();
+               }, timeout);
+           });
+           return this;
+       }
+   </script>
+   <script>
+       $(function() {
+
+           $('#search_input').fastLiveFilter('#search_list');
+
+       });
+   </script>

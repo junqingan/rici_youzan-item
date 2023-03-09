@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title><{$title}><{widgets code="global-public-meta" }></title>
+        <meta name="application-name" content="<{$title}>" />
+        <meta name="title" content='<{$title}><{widgets code="global-public-meta"}>' />
+        <meta name="keywords" content="<{$keywords}>" />
+        <meta name="description" content="<{$description}>" />
+        <meta name="robots" content="all" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <link href="https://www.ruicitijian.com/themes/pc/vmc_ruici/images/icon.ico" type="image/x-icon" rel="shortcut icon" />
+        <{SYSTEM_HEADER}>
+        <link rel="stylesheet" href="statics/global.css">
+        <link rel="stylesheet" href="statics/style.css">
+        <link rel="stylesheet" href="statics/swiper.css">
+        <script src="statics/swiper.js"></script>
+        <{script src='jquery.lazyload.min.js?vatic' }>
+
+        <{widgets code="html-public-js" id="594"}>
+        <style>
+            .index-hotcoupons{width:100%;margin:0 auto;}
+            .index-hotcoupons .g-wrap table { margin:0 auto;}
+            .index-hotcoupons .g-wrap {padding: 0; }
+            .index-module{width:990px;margin:20px auto;}
+            .index-module .colume-wrap{width:1000px}
+            .index-module .colume-wrap .index-item-wrap{ margin:0 10px 10px 0;*margin:0 7px 10px 0;} 
+            h1{margin-left:-9999px;height:0px}
+
+            .special_page_top{ width:100%;height:500px; margin:0 auto; background:url("/public/images/d8/1b/2d/33e20771904c1d23240d548a935e450cc86856be.png") no-repeat center 0;}
+
+
+            .special_page_all{ width:100%; margin:0 auto;position:relative;  background:#fff2f0 url("/public/images/8b/20/b5/3112fd0ee34b4d702703c84f122f607e50051bca.png") repeat-y 0px 500px;}
+            /*.special_page_topcon{ width:100%; margin:0 auto;position:relative;  background:url("/public/images/7e/06/a2/56040aa13020b20654f96ebdd600cedc33dcaf7b.png") no-repeat center 500px;} */
+
+            .index-hotcoupons{ width:100%; margin:0 auto;}
+            .index-module h2 {margin-bottom:20px;width:990px; } 
+            .index-module .sub_title {color: #f3e779;height: 20px;line-height: 20px;font-size: 18px;text-align:center;margin-bottom:10px;width:990px} 
+
+            .index-module .colume-title {background:url("/public/images/8a/54/93/6a1d2af72862e40420098e8bd446ad56714d9b36.png") no-repeat;margin:0 auto; height:150px;}
+            .index-module .colume-title-one {background-position: 0 0px }
+            .index-module .colume-title-two {background-position: 0 -150px;} 
+            .index-module .colume-title-three {background-position: 0 -300px;} 
+            .index-module .colume-title-four {background-position: 0 -450px;} 
+            .index-module .colume-title-five {background-position: 0 -600px;}
+
+
+            .special_page_title{ width:950px; margin:20px auto; font-weight:bold; font-size:30px; height:35px;line-height:35px;color:#ff4c76;}
+            .special_page_content{ width:950px; margin:0 auto;color:#ff4c76; font-size:18px;}
+            .special_page_content span{ display:block; line-height:40px;}
+            .special_page_pic{ padding-top:30px;margin:0 auto;width:990px;text-align: center;}
+            .index-module .index-item-wrap .index-item-list {background-color: #ffffff;}
+
+            .index-exception{position:relative; }
+
+            .tonglan{width: 990px;margin: 20px auto 0;    position: relative;z-index:99;}
+            /*券*/
+            .tonglan{width:990px;margin:0px auto 20px;position:relative;}
+            .couponsbox,.couponsbox2{width:890px;margin:0 auto;position:absolute;top:130px;display: flex;right: 0;left:0;justify-content: space-between;flex-wrap:wrap;}
+            .couponsbox2{top:25px;width:870px;}
+            .coup{height:190px; width: 33%;}
+            .tonglan-h .coup{ height: 725px;width:50%}
+
+            
+            .yhj { width: 990px; padding-top: 20px; display: flex; justify-content: space-between;align-items: center;}
+      		.yhj_icon { width: 30%; text-decoration: none;display: flex; flex-direction: column;justify-content: center;background: url("/public/images/ec/2d/5f/76a40ebd20cd461f6e3a942b5c2ba198d2bf35b9.png") no-repeat bottom; border-radius: 20px;}.yhj_top { height: 120px;background: url("/public/images/ef/29/74/1a05e3800d22b3b9d391d123662a2ea4d14d2dae.png") no-repeat center;border-radius: 20px; position: relative; cursor: pointer;}
+            .yhj_top::after {content: ""; background: url("/public/images/2e/e8/cc/aafe565fc7fc8ae1251d9625b1c2fc3586065723.png") no-repeat center;width: 70px;height: 60px;background-size: contain;position: absolute;top: 15px;left: -7px;z-index: 7; }
+ 			.yhj_bgImg {height: 100%;width: 80%;position: absolute;left: 46px;top: 0px;z-index: 8;}
+      		.yhj_icon01 { background: url("/public/images/83/63/70/774fea5eae869e2e41259e8cba497a6eb18f089b.png") no-repeat center/contain;} 
+            .yhj_icon02 {background: url("/public/images/f9/38/b0/46c62ef3b99e2660f705ee50566b749884e2e656.png") no-repeat center/contain;}
+      		.yhj_icon03 {background: url("/public/images/ac/d0/54/be7ae9ed94e01214d6147b3195b01785b844f491.png") no-repeat center/contain;}
+      		.icon_text { text-align: center;font-size: 20px;color: #fff;display: inline-block;height: 60px;cursor: pointer;line-height: 44px;}
+     		.yhj_icon:hover {transition: all 0.2s;background: url("/public/images/d4/e9/eb/6254100c1c63898eaa577c6365d50f4843d87cb8.png") no-repeat bottom; }
+      		.yhj_icon:hover .yhj_top {transition: all 0.2s;background: url("/public/images/a3/62/d4/e68590194cda9837ae2dacb742adef3472f136a8.png") no-repeat center; }
+      		.yhj_icon:hover .yhj_icon01 {transition: all 0.2s;background: url("/public/images/89/d1/e4/15ad871c9b88a818782d61d9f1eb181ea5c4f87a.png") no-repeat center/contain;}
+            .yhj_icon:hover .yhj_icon02 {transition: all 0.2s; background: url("/public/images/72/47/aa/b624c5a56c801269afe65f88e674854e31d6473a.png") no-repeat center/contain; }
+     		.yhj_icon:hover .yhj_icon03 {transition: all 0.2s;background: url("/public/images/0a/95/50/44a48accd56b543a9bb24161e6a6c3c313d8ce25.png") no-repeat center/contain; }
+            .lq{display:none}
+            .yhj_icon:hover .lq{display:inline-block}
+            .yhj_icon:hover .sf{display:none}
+     		.commodity{display: flex;flex-direction: column;justify-content: center;}
+      		.commodity_top{height: 738px;position: relative;background: url("/public/images/31/6d/a3/b3a33075ab0ed37751e55d4bbb48d87f9549e0d4.png") no-repeat center;display: flex;align-items: flex-end; }
+      		.commodity_bottom{ height: 608px; position: relative;background: url("/public/images/51/38/dc/1b77081adb2051c4331670464e83a73cdca20459.png") no-repeat center;display: flex;}
+      		.top_a{width: 50%; height: 84%; cursor: pointer; }
+    		.bottom_a{  width: 50%; height: 100%;cursor: pointer;}
+        </style>
+    </head>
+
+    <body>
+
+        <{require file="public/header.html" }>
+
+        <div class="special_page_all">
+            <div class="special_page_topcon">
+                <div class="special_page_top"></div>
+                <!-- 通栏 -->
+                <div class="tonglan">
+                    <!-- <{widgets code="templatecolumn-content-recommend-onepic" id="3117"}>  -->
+         <!-- 优惠券 -->
+          <div class="yhj">
+            <a  class="coupons coup_1 yhj_icon"  href="/openapi/cpns/get_cpns/cpns_id/1085">
+              <div class="yhj_top">
+                <div class="yhj_icon01 yhj_bgImg"></div>
+              </div>
+              <p class="icon_text sf">实付满800可用</p>
+              <p class="icon_text lq">立即领取</p>
+            </a>
+            <a href="/openapi/cpns/get_cpns/cpns_id/1087"  class="coupons coup_1 yhj_icon">
+              <div class="yhj_top">
+                <div class="yhj_icon02 yhj_bgImg"></div>
+              </div>
+              <p class="icon_text sf">实付满1500可用</p>
+              <p class="icon_text lq">立即领取</p>
+            </a>
+            <a href="/openapi/cpns/get_cpns/cpns_id/1089"  class="coupons coup_1 yhj_icon">
+              <div class="yhj_top">
+                <div class="yhj_icon03 yhj_bgImg"></div>
+              </div>
+              <p class="icon_text sf">实付满3000可用</p>
+              <p class="icon_text lq">立即领取</p>
+            </a>
+          </div>
+          <!-- sahngpin -->
+          <div class="commodity">
+            <div class="commodity_top">
+                <a href="/item-52.html" class="top_a"  target="_blank"></a>
+                <a href="/item-40.html" class="top_a"  target="_blank"></a>
+            </div>
+            <div class="commodity_bottom">
+                <a href="/item-68.html" class="bottom_a"  target="_blank"></a>
+                <a href="/item-327.html" class="bottom_a"  target="_blank"></a>
+            </div>
+          </div>
+                </div>
+                <div class="index-module">
+
+                    <!-- 买一送一 -->
+                    <div class="g-wrap overhide">
+                        <div class="colume-wrap clearfix">
+                            <h2 class="colume-title colume-title-one" id="1F"></h2>
+                            <{widgets code="content-commodity-pictext-point-item-price-buy" id="3891"}>
+
+                        </div>
+                    </div>
+                    <!-- 爆款专区 -->
+                    <div class="g-wrap overhide">
+                        <div class="colume-wrap clearfix">
+                            <h2 class="colume-title colume-title-two" id="2F"></h2>
+                            <{widgets code="content-commodity-pictext-point-item-price-buy" id="3893"}>
+                        </div>
+                    </div>
+
+                    <!-- 女性专区 -->
+                    <div class="g-wrap overhide">
+                        <div class="colume-wrap clearfix">
+                            <h2 class="colume-title colume-title-three" id="5F"></h2>
+                            <{widgets code="content-commodity-pictext-point-item-price-buy" id="3895"}>
+                        </div>
+                    </div>
+
+                    <!-- 感恩父母 -->
+                    <div class="g-wrap overhide">
+                        <div class="colume-wrap clearfix">
+                            <h2 class="colume-title colume-title-four" id="3F"></h2>
+                            <{widgets code="content-commodity-pictext-point-item-price-buy" id="3897"}>
+                        </div>
+                    </div>
+                    <!-- 中高端 -->
+                    <!-- <div class="g-wrap overhide">
+                        <div class="colume-wrap clearfix">
+                            <h2 class="colume-title colume-title-five" id="4F"></h2>
+                        <{widgets code="content-commodity-pictext-point-item-price-buy" id=""}> 
+                    </div>-->
+                    </div> 
+
+                </div>
+                <{MAIN}>
+            </div>
+        </div>
+        <{require file="public/footer.html" }>
+        <{SYSTEM_FOOTER}>
+
+
+    </body>
+</html>

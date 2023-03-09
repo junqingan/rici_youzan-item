@@ -1,0 +1,2050 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title><{$title}><{widgets code="global-public-meta" }></title>
+    <meta name="application-name" content="<{$title}>" />
+    <meta name="title" content='<{$title}><{widgets code="global-public-meta"}>' />
+    <meta name="keywords" content="<{$keywords}>" />
+    <meta name="description" content="<{$description}>" />
+    <meta name="robots" content="all" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link href="https://www.ruicitijian.com/themes/pc/vmc_ruici/images/icon.ico" type="image/x-icon" rel="shortcut icon" />
+    <{SYSTEM_HEADER}>
+    <link rel="stylesheet" href="statics/global.css" />
+    <link rel="stylesheet" href="statics/style.css" />
+    <link rel="stylesheet" href="statics/swiper3.4.2.css" />
+    <script src="statics/swiper3.4.2.js"></script>
+    <{script src='jquery.lazyload.min.js?vatic'}> <{widgets code="html-public-js" id="594"}>
+    <style>
+      .page-contion {
+        width: 1200px;
+        min-height: 800px;
+        margin: 0 auto;
+        padding: 20px 0px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .contion-left {
+        width: 160px;
+      }
+      .contion-left ul li {
+        width: 100%;
+        background: #ffffff;
+        margin-bottom: 10px;
+        line-height: 40px;
+        font-size: 16px;
+        text-align: center;
+        position: relative;
+        color: #009fa8;
+        border: 1px solid #009fa8;
+      }
+      .contion-left ul li.active {
+        background: #009fa8;
+        color: #ffffff;
+      }
+      .contion-left ul li:hover {
+        background: #009fa8;
+        color: #ffffff;
+      }
+      .contion-left ul li span {
+        display: block;
+        cursor: pointer;
+        width: 100%;
+        text-align: center;
+      }
+      .contion-left ul li:after {
+        content: "";
+        position: absolute;
+        right: 5px;
+        top: 15px;
+        border: 5px solid transparent;
+        border-left-color: #ffffff;
+      }
+      .contion-right {
+        width: 1030px;
+      }
+      .contion-right .listcon {
+        display: none;
+        min-height: 760px;
+        position: relative;
+        border: 1px solid #009fa8;
+      }
+      .contion-right .listcon.current {
+        display: block;
+      }
+      .contion-right .listcon:before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: -10px;
+        width: 0;
+        height: 0;
+        border: 5px solid transparent;
+        border-right-color: #009fa8;
+      }
+      .contion-right .listcon.shanghai:before {
+        top: 17px;
+      }
+      .contion-right .listcon.jiangsu:before {
+        top: 67px;
+      }
+      .contion-right .listcon.beijing:before {
+        top: 117px;
+      }
+      .contion-right .listcon.zhejiang:before {
+        top: 171px;
+      }
+      .contion-right .listcon.shandong:before {
+        top: 223px;
+      }
+      .contion-right .listcon.guangdong:before {
+        top: 273px;
+      }
+      .contion-right .listcon.anhui:before {
+        top: 327px;
+      }
+      .contion-right .listcon.hubei:before {
+        top: 379px;
+      }
+      .contion-right .listcon.hunan:before {
+        top: 431px;
+      }
+      .contion-right .listcon.sichuan:before {
+        top: 483px;
+      }
+      .contion-right .listcon.liaoning:before {
+        top: 535px;
+      }
+      .contion-right .listcon.fujian:before {
+        top: 587px;
+      }
+      .contion-right .listcon .list-con {
+        width: 100%;
+        margin: 0 auto 10px;
+        overflow: hidden;
+        display: flex;
+        justify-content: flex-start;
+        border-bottom: 1px solid #009fa8;
+      }
+      .contion-right .listcon .list-con span {
+        cursor: pointer;
+        flex-grow: 1;
+        text-align: center;
+        color: #009fa8;
+        border-right: 1px dashed #009fa8;
+        line-height: 48px;
+      }
+      .contion-right .listcon .list-con span.now {
+        background: #009fa8;
+        color: #ffffff;
+      }
+      .contion-right .listcon .list-con span:hover {
+        background: #dafdff;
+        color: #009fa8;
+      }
+      .contion-right .listcon .list-con span:last-child {
+        border: none;
+      }
+      .listul {
+        width: 100%;
+        padding: 0 20px 10px 20px;
+        box-sizing: border-box;
+      }
+      .list-info {
+        width: 100%;
+        overflow: hidden;
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px dashed #c6c6c6;
+      }
+      .list-info:last-child {
+        border-bottom: 0;
+      }
+      .list-info .list-img {
+        width: 340px;
+        height: 227px;
+        position: relative;
+      }
+      .list-info .list-img li img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        vertical-align: top;
+        font-size: 0;
+      }
+      .list-info .list-txt {
+        width: 645px;
+        padding-left: 15px;
+      }
+      .list-info .list-txt h3 {
+        line-height: 32px;
+        font-size: 24px;
+      }
+      .list-info .list-txt p {
+        line-height: 24px;
+        font-size: 14px;
+        margin-bottom: 5px;
+        color: #000;
+      }
+      .list-info .list-txt p span {
+        margin-right: 10px;
+        font-weight: 600;
+      }
+      .list-info .list-txt p code {
+        font-style: normal;
+        font-weight: 600;
+        margin-right: 10px;
+      }
+      .swiper-diandian {
+        position: absolute;
+        z-index: 99;
+        text-align: center;
+        bottom: 0 !important;
+      }
+      .swiper-diandian .swiper-pagination-bullet {
+        width: 45px;
+        height: 4px;
+        border-radius: 2px;
+        background: #ffffff;
+        margin: 0 2px;
+        display: inline-block;
+        opacity: 1;
+      }
+      .swiper-diandian .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        background: #009fa8;
+      }
+      .productslist {
+        margin-top: 10px;
+      }
+      .productslist .productslist-hd {
+        width: 100%;
+        height: 60px;
+        padding-left: 10px;
+        font-size: 24px;
+        text-align: left;
+        box-sizing: border-box;
+        line-height: 60px;
+        color: #009fa8;
+        position: relative;
+        margin-bottom: 10px;
+      }
+      .productslist .productslist-hd:before {
+        content: "";
+        width: 5px;
+        height: 24px;
+        background: #f00000;
+        position: absolute;
+        top: 15px;
+        left: 0;
+      }
+      .productslist .productslist-bd,
+      .productslist .productslist-bd .colume-wrap {
+        width: 1000px;
+        overflow: hidden;
+      }
+      .productslist .productslist-bd .index-item-wrap {
+        margin: 0 10px 10px 0;
+        *margin: 0 7px 10px 0;
+        width: 240px;
+        border: 1px solid #e1e1e1;
+        float: left;
+      }
+    </style>
+  </head>
+
+  <body>
+    <{require file="public/header.html" }>
+
+    <div class="special_page_all">
+      <div class="page-contion">
+        <div class="contion-left" id="product-menu">
+          <ul>
+            <li class="active"><span>上海市</span></li>
+            <li><span>江苏省</span></li>
+            <li><span>北京市</span></li>
+            <li><span>浙江省</span></li>
+            <li><span>山东省</span></li>
+            <li><span>广东省</span></li>
+            <li><span>安徽省</span></li>
+            <li><span>湖北省</span></li>
+            <li><span>湖南省</span></li>
+            <li><span>四川省</span></li>
+            <li><span>辽宁省</span></li>
+            <li><span>福建省</span></li>
+          </ul>
+        </div>
+        <div class="contion-right" id="product-list">
+          <div class="listcon shanghai current">
+            <div class="list-con">
+              <span class="now">静安区</span>
+              <span>浦东新区</span>
+              <span>徐汇区</span>
+              <span>杨浦区</span>
+              <span>普陀区</span>
+              <span>松江区</span>
+              <span>闵行区</span>
+              <span>青浦区</span>
+              <span>宝山区</span>
+              <span>嘉定区</span>
+              <span>奉贤区</span>
+            </div>
+            <div class="listul">
+              <div class="tabcont">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper12">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/0b/fa/2d/ecb146bd274348e5545cd616642d12fbf72c253b.png" alt="" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/17/33/6e/d9f70795eb3a7dd903768d0e77b5a0e2845434a3.png" alt="" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/14/68/de/62c6f7da564d11e9f8ae6c0c40ebb217cf7adb41.png" alt="" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/7d/a9/60/57840a21979ff00f64f7190447a58614453582ca.png" alt="" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>上海瑞慈静安体检中心</h3>
+                      <p><span>体检地址：</span>静安区江宁路212号凯迪克大厦1-3层</p>
+                      <p><span>机构休息：</span>无休息</p>
+                      <p>
+                        <span>附近交通：</span><br /><code>1.地铁：</code>2号线：南京西路1号口；12号线：南京西路14号口；13号线：南京西路11号口<br /><code>2.公交：</code
+                        >23路：江宁路南京西路站；49路：威海路陕西北路站；104路、316路、136路、36路、206路：新闸路江宁路站；15路：北京西路泰兴路站；37路：南京西路石门一路站；927路：北京西路陕西北路站；301路：陕西北路南京西路站；138路：常德路新闸路站；323路：铜仁路南京西路站
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module"><div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div></div>
+                </div>
+              </div>
+              <div class="tabcont hidden">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper2">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/6c/e2/ca/af97285fd0f0527c24b78b8fe636ece86763189e.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/29/c6/a8/56e16fcff473785cf582d3e0cecb83946b5fbc3b.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/47/03/cd/ea355d97cc7a0c864807362a8ab1a722f9d380a7.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/a4/08/cd/cc0ff3200d602f300dec172753adf8ba06e3b291.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>上海瑞慈陆家嘴体检中心</h3>
+                      <p><span>体检地址：</span>浦东新区浦东南路256号华夏银行大厦3层</p>
+                      <p><span>机构休息：</span>周一休息</p>
+                      <p>
+                        <span>附近交通：</span><br />
+                        <code>1.地铁：</code>上海地铁2号线-陆家嘴3号口；上海地铁4号线-浦东大道1号口；上海地铁9号线-商城路4号口; <br /><code>2.公交：</code
+                        >新川专线、上川专线、455路：陆家嘴东路浦东南路站；隧道八线、隧道九线、浦卫专线、774路、85路、779路：浦东南路东城路站；01路、隧道六线：世纪大道浦东南路站；971路、隧道三线：浦东南路浦东大道站；870路：东昌路浦东南路站；792路：泰东路渡口站；985路、791路：陆家嘴环路东泰路站
+                      </p>
+                    </div>
+                  </li>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper31">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/bc/96/b2/4f8c666b7ccb353fdc1de8ff018297e9fbd95cd6.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/10/78/c9/b199276ccc530e0c3fd9624233464695b1bb0d06.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/b7/ec/8b/3c2565a3ce390797b3859dae6a43aad8ec957983.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/a7/81/79/32d8ded9af533ae49b47f67ac166fbe0d2a94560.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>上海瑞慈福山路体检中心</h3>
+                      <p><span>体检地址：</span>浦东新区福山路450号2层A,B,C,D室</p>
+                      <p><span>机构休息：</span>周二休息</p>
+                      <p>
+                        <span>附近交通：</span><br />
+                        <code>1.地铁：</code>4号线：浦电路站1号口；6号线：浦电路站1号口；2号线、9号线：世纪大道站7号口； <br /><code>2.公交：</code>浦东11路、610路、746路、隧道九线、871路、583路、639路、779路、785路：东方路浦电路站；792路：潍坊路东方路站；451路：潍坊路崂山路站；169路、995路：浦电路东方路站；977路：灵山路源深路站；783路：张杨路福山路站
+                      </p>
+                    </div>
+                  </li>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper70">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/2a/10/01/76a1d2fd2e1aa7732ebdadb4f1eb6cc8c1667827.png" alt="" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/46/80/8e/9f5fc760adcbab0d62b77b51fbaf0d585a4b90f8.png" alt="" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/d3/f9/a7/cea46b0196bedc233e9fa774e77e8f79aef394a2.png" alt="" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/5e/f1/e2/75224112bd75b207a21a324cce01b4e41d5f00df.png" alt="" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>上海瑞慈金桥体检中心</h3>
+                      <p><span>体检地址：</span>上海市浦东新区金皖路199号A栋裙楼2-4层</p>
+                      <p><span>机构休息：</span>周四休息</p>
+                      <p><span>附近交通：</span><br /><code>1.地铁：</code>地铁9号线(金桥站);<br /><code>2.公交：</code>金皖路新金桥路(途径：777路)，新金桥路唐陆路(途径：浦东27路、上川专线)；新金桥路金豫路(途径：573路、上川专线)；金豫路新金桥路(途径：浦东27路) <br /><code>3.自驾：</code>7元/小时，21元/天封顶</p>
+                    </div>
+                  </li>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper3">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                          <img src="https://www.ruicitijian.com/public/images/08/5a/75/c79d0e7a68a4f9a108f7202f1db7cd9ec09fd8b4.png" />
+                        </li>
+                        <li class="swiper-slide">
+                          <img src="https://www.ruicitijian.com/public/images/d0/69/1f/faf895455a9c733d5f0a8b21393c7041267c9278.png" />
+                        </li>
+                        <li class="swiper-slide">
+                          <img src="https://www.ruicitijian.com/public/images/4f/ab/5a/9af015e9414c6c672528d59fff2b3d012d239d80.png" />
+                        </li>
+                        <li class="swiper-slide">
+                          <img src="https://www.ruicitijian.com/public/images/f7/4d/13/d417ad4188ab91cdf18bb31415b7b5c1769c305d.png" />
+                        </li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>上海瑞慈张江体检中心</h3>
+                      <p><span>体检地址：</span>上海市浦东新区张江高科技园区张东路1388号15号楼1-3楼</p>
+                      <p><span>机构休息：</span>周三休息</p>
+                      <p><span>附近交通：</span><br /><code>1.地铁：</code>2号线：广兰路5号口；<br /><code>2.公交：</code>浦东1路、1104路：金秋路张东路站；1058路：丹桂路金秋路站；张江1路：盛夏路祖冲之路站；张江环线、张江有轨电车1路：张东路金秋路站</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module"><div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div></div>
+                </div>
+              </div>
+              <div class="tabcont hidden">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper24">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/b2/9d/98/66649b757a650fc5ebb28d4a0df35c111d4a5024.png" /></li>
+                        <li class="swiper-slide">
+                          <img src="https://www.ruicitijian.com/public/images/f9/df/c0/c161b6d79a2a7e5287e90c4f9921709b62e99b7b.png" />
+                        </li>
+                        <li class="swiper-slide">
+                          <img src="https://www.ruicitijian.com/public/images/73/b7/06/7aaac1b1475d83a1c36763ae0937c8c431b5ca5b.png" />
+                        </li>
+                        <li class="swiper-slide">
+                          <img src="https://www.ruicitijian.com/public/images/c6/1d/ef/4db4887ccf1499916db10f1ca5d7fc8e1c3ae9eb.png" />
+                        </li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>上海瑞慈徐汇体检中心</h3>
+                      <p><span>体检地址：</span>上海市徐汇区斜土路2899号光启文化广场B栋7楼</p>
+                      <p><span>机构休息：</span>周二休息</p>
+                      <p><span>附近交通：</span><br /><code>1.地铁：</code>4号线：上海体育场站4号口；<br /><code>2.公交：</code>15路、927路、824路、92路b线、92路、218路、111路、808路、89路、56路：上海体育场站；104路：中山南二路宛平南路站；864路：天钥桥路斜土路站；徐闵线、198路、946路、816路、43路、50路：漕溪北路裕德路站；703路：漕溪北路蒲汇塘路站</p>
+                    </div>
+                  </li>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper9">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/7a/20/6f/d10bffb0c009f89950a844ba5be4021baddc5cb6.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/37/8a/d2/60afcf811adaa111bd4f7710789a33a25014939b.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/b5/90/f5/c9778edac9d7bb9e3b9b330357f2650e007ee930.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/2e/f5/80/c15754a8c2f208fb38e8bc3586292a7a1825fde4.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>上海瑞慈漕河泾体检中心</h3>
+                      <p><span>体检地址：</span>上海市徐汇区宜山路1388号民润大厦3楼</p>
+                      <p><span>机构休息：</span>周三休息</p>
+                      <p><span>附近交通：</span><br /><code>1.地铁：</code>9号线：漕河泾开发区4号口；<br /><code>2.公交：</code>927路、731路、131路：宜山路虹梅路站；205路:桂平路宜山路站；89路、700路：古美路宜山路站；757路、804路、865路：虹许路宜山路站；809路：虹梅路宜山路站；867路：莲花路宜山路站</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module"><div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div></div>
+                </div>
+              </div>
+              <div class="tabcont hidden">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper11">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/f7/db/ea/bd4c95616a5b513a54a92355af3c938b3f7332bc.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/e5/05/09/8462cfe3386ebad7338b189a6e50599670492345.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/cf/12/bd/e667e705e80a4051db88f4f1986590609a082776.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/5c/1f/ae/7da5ac8f6cd59d38c5b94e4b2cb63656982cad7b.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>上海瑞慈杨浦体检中心</h3>
+                      <p><span>体检地址：</span>上海市杨浦区国定路323号3号楼创业大厦13楼</p>
+                      <p><span>机构休息：</span>周四休息</p>
+                      <p><span>附近交通：</span><br /><code>1.地铁：</code>10号支线：五角场4号口；3号线：大柏树1号口；<br /><code>2.公交：</code>55路、61路、817路、937路：四平路国定路站；966路、139路、133路、850路、812路：复旦大学站；60路、405路：国定路四平路站；118路：国权路邯郸路站；749路、819路：国定路邯郸路站；大桥五线：政修路国达路站</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module"><div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div></div>
+                </div>
+              </div>
+              <div class="tabcont hidden">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper13">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/5e/15/df/03e85e7c292ac645f9f8a7a2636d1d18739f5174.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/e0/c0/ed/3ada5fe947a1f98728cfd18bb7e3f064dfd05cf9.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/ec/f8/dc/e475cad4fdaa53c8a48b8e65927056aaa8446172.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/a5/cc/37/e54aeffd47b14ac1078c45a3af4982e9e4e05e78.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>上海瑞慈普陀体检中心</h3>
+                      <p><span>体检地址：</span>普陀区金沙江路1628弄绿洲中环中心商务广场7号楼2层</p>
+                      <p><span>机构休息：</span>周一休息</p>
+                      <p><span>附近交通：</span><br /><code>1.地铁：</code>13号线：真北路站3号口；<br /><code>2.公交：</code>216路、846路、827路、青泸线、750路、158路：真北路金沙江路站；94路、67路、765路、807路、101路a线：金沙江路真北路站；948路：清峪路真光路站；837路：真光路清峪路站；长征1路：万镇路金沙江路站</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module"><div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div></div>
+                </div>
+              </div>
+              <div class="tabcont hidden">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper14">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/29/48/2e/1776fa8d7993de5e262044ac8a2103e5e96e84fc.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/31/fb/90/efc05bcbd5a5a1f1031c693e72daf5cc41c5d7fb.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/32/75/17/c618185c4109a59a10516432f19380d79f466eed.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/b7/e9/f3/9b2aa094675dd684ac5334983b4e95f9d07910b1.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>上海瑞慈松江体检中心</h3>
+                      <p><span>体检地址：</span>上海市松江区方塔北路605号企德天地6-8层</p>
+                      <p><span>机构休息：</span>周四休息</p>
+                      <p><span>附近交通：</span><br /><code>1.地铁：</code>9号线：松江体育中心站3号口；<br /><code>2.公交：</code>松江10路、松江34路、松江34路内圈、松江6路：荣乐路方塔路站；松江8路：美能达路方塔北路站；沪松专线：方塔公园(下客站)站；沪松线、松青线：五里塘站；松江1路：荣乐路方塔北路站；松闵线：菜花泾市场站；松莘线：东区大道站</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module"><div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div></div>
+                </div>
+              </div>
+              <div class="tabcont hidden">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper43">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/0b/55/2a/d40b854888867e61a41172c940d2f295cf7b12b9.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/df/d9/62/6e1298682ddf1874970f5ebf6e1e41497ac5e04a.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/4c/ae/ae/3f27cb675b5d12b1e3f72a4da2b65d07d2833a7d.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/bb/0a/18/b311201dbe2b132a89cfc0f2acbaf0f19824ff1a.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>上海瑞慈闵行体检中心</h3>
+                      <p><span>体检地址：</span>上海市闵行区七莘路2099号1-2楼</p>
+                      <p><span>机构休息：</span>周四休息</p>
+                      <p><span>附近交通：</span><br /><code>1.地铁：</code>七莘路（地铁站）12号线2号口出，1.1公里；七宝（地铁站）9号线5号口出，1.9公里；<br /><code>2.公交：</code>七莘路华友路（公交站）、七莘路中谊路（公交站）：91路，189路，196路，803路，虹桥枢纽4路，春运5路，南江线；</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module"><div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div></div>
+                </div>
+              </div>
+              <div class="tabcont hidden">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper38">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/0e/5e/7c/810221e5df0219e217247dfeee2e5ee47b36ed1e.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/94/04/f9/7869668040a3a64959b41d5a134f9a8210a41bec.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/b5/d7/22/7298577d0f8ea3a2f5f89d397f6936baf7eeb43e.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/3a/00/f9/20be6028e8897cd8347e767ea2cfd765696891b5.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>上海瑞慈青浦体检中心</h3>
+                      <p><span>体检地址：</span>上海市青浦区公园东路1289弄26号3-6层</p>
+                      <p><span>机构休息：</span>周二休息</p>
+                      <p><span>附近交通：</span><br /><code>1.地铁：</code>17号线汇金路站转青浦4路/青浦7路/青浦25路/青浦2路公园东路华浦路站下车<br /><code>2.公交：</code>公园东路华浦路站（途经：青华专线；青浦11路；青浦18路；青浦1路；青浦3路；青浦7路；青泸线；上青线）</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module"><div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div></div>
+                </div>
+              </div>
+              <div class="tabcont hidden">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper45">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/da/20/8a/c243befc9f973de943779ee655ef8707115814c4.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/83/4f/30/5dab542695800b8e67e9273facc74c61274048ed.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/06/b1/17/d39aa7670965a7ac2ca7a4710469c7da4605e2fc.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/1f/4d/c2/1c59f9a2e63a04f3a6eff040dab5a17e3ab40cde.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>上海瑞慈宝山体检中心</h3>
+                      <p><span>体检地址：</span>宝山区共和新路4727号新陆国际商务大厦11/12楼</p>
+                      <p><span>机构休息：</span>周三休息</p>
+                      <p><span>附近交通：</span><br /><code>1.地铁：</code>地铁一号线共康路站1号口对面<br /><code>2.公交：</code>46、95、849、701、719、862路均可到达</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module"><div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div></div>
+                </div>
+              </div>
+              <div class="tabcont hidden">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper23">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/cb/94/ee/ad3a24def56ab1a687cf3f5f0199052219f2d4e3.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/1b/5a/7c/0247d1520293b7b08e4c37db02cb6015583869c6.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/d3/13/45/050de3bbea4d3e6daeb7c4610c97a08d42b3d746.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/77/28/3b/8fd16e82bef90872d2ee116e35d973147808a4bb.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>上海瑞慈嘉定体检中心</h3>
+                      <p><span>体检地址：</span>嘉定区永盛路1190号一层A2区、二层、三层B区</p>
+                      <p><span>机构休息：</span>周二休息</p>
+                      <p>
+                        <span>附近交通：</span><br /><code>1.地铁：</code>11号线(白银路站1号口出来换乘嘉定4路,地铁11号线嘉定新城站1号口出来换乘嘉定9路,嘉定14路,或嘉定9路)<br />
+                        <code>2.公交：</code>塔秀路永盛路站(嘉定4路、嘉定9路)、永盛路天祝路站(嘉定14 路、嘉定67路)<br /><code>3.自驾：</code>嘉定区永盛路1190号(原出入境办理中心)
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module"><div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div></div>
+                </div>
+              </div>
+              <div class="tabcont hidden">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper72">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/fc/30/f7/c5f71e631c8f1d116864054a3de4fd803f2a4941.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/4b/5e/4e/aa328c577abbacf553b9c14487a57938ba5387a4.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/0f/60/e5/adb3661d8f4b8ae3098420d04088590ea8f47883.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/d6/1e/11/f3c491d8e424cf0171fd1c74b3b6fbf8fac9142a.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>上海瑞慈奉贤体检中心</h3>
+                      <p><span>体检地址：</span>上海市奉贤区金海公路6055号33号楼</p>
+                      <p><span>机构休息：</span>周三休息</p>
+                      <p><span>附近交通：</span><br /><code>1.公交：</code>金海公路金齐路（奉贤11路）、金齐路农业园区（浦卫线）、金齐路金海公路（奉贤40路）、广丰路金海公路（奉贤6路）</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module"><div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="listcon jiangsu">
+            <div class="list-con">
+              <span class="now">南通市</span>
+              <span>南京市</span>
+              <span>苏州市</span>
+              <span>扬州市</span>
+              <span>常州市</span>
+              <span>徐州市</span>
+              <span>无锡市</span>
+              <span>镇江市</span>
+              <span>盐城市</span>
+              <span>淮安市</span>
+              <span>宿迁市</span>
+              <span>泰州市</span>
+            </div>
+            <div class="listul">
+              <div class="tabcont">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper35">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/ff/f4/c8/fa292f8badba89abe9c2d157709181458972c14d.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/15/15/8d/e225a29bd59e3a8c90651e042e1d8294396e5be0.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/8b/21/f4/3d208cbb04f0cef6643a69054ce0e0a487ea00b6.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/54/07/2e/6626a5895f017bf15e4217c38cb7328007cb8a73.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>南通瑞慈文峰城市广场体检中心</h3>
+                      <p><span>体检地址：</span>南通市崇川区虹桥路1号文峰城市广场6号楼9-10楼</p>
+                      <p><span>机构休息：</span>周二休息</p>
+                      <p><span>附近交通：</span><br /><code>1.公交：</code>8路、25路、79路、72路、11路、13路：文峰城市广场站；620路：工农路虹桥路口站</p>
+                    </div>
+                  </li>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper6">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/04/ba/87/1832240f3cc45c223179cd3627ca35a779cc111f.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/92/70/ef/b292d0477fe885080d96ae5c0271900d3182e722.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/6d/fd/5b/631917023c355e4f9b54006242818cdd33adaa56.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/82/4a/6a/95c45f0ce901d56915d3c6bf0fb6292147dc4602.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>南通瑞慈医院体检中心</h3>
+                      <p><span>体检地址：</span>南通市经济技术开发区星湖大道2000号瑞慈医院门诊3层</p>
+                      <p><span>机构休息：</span>无休息</p>
+                      <p><span>附近交通：</span><br /><code>1.公交：</code>22路、58路、13路、620路：瑞慈医院站；28路：开发区公安分局·罗莱家纺站；91路：民主新村站</p>
+                    </div>
+                  </li>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper7">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/54/d5/d1/baae995e796a9c5dc329aeaf025bd51265d583b8.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/db/28/48/43750416dd0ac2280b3497a1ca3c73d91b5b752c.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/f1/15/52/0d2725b915cdaadaa78acaa5cf85b52a354f5c75.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/d6/77/e8/1f84e5179d02c5357f1670e36888391848a82d80.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>南通瑞慈滨江体检中心</h3>
+                      <p><span>体检地址：</span>南通市崇川区滨江公园休闲新天地1号楼</p>
+                      <p><span>机构休息：</span>周一休息</p>
+                      <p><span>附近交通：</span><br /><code>1.公交：</code>45路：园博园回车场站；88路、83路：滨江花园站；5路：三鲜街东站</p>
+                    </div>
+                  </li>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper53">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/9b/c2/cd/8e35ef89a7c1b0f57df31119e86e89a524e77acb.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/6c/9e/97/a0ac4ff47b8541e786d85614833cc9c4fd4d25db.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/2b/d8/eb/f465abeb29c5083f67bf26cfd6e9b39ad922a568.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/fd/f6/6c/c68b6a0ac130afcd66453b60cd1d038b596f1456.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/ec/7c/5d/c012491ffbb2fb8a0e5586ce89df56010a3359fc.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>南通瑞慈瑞兴体检中心</h3>
+                      <p><span>体检地址：</span>南通市港闸区永和路588号绿洲国际商务城B幢201室及3层</p>
+                      <p><span>机构休息：</span>周四休息</p>
+                      <p><span>附近交通：</span><br /><code>1.公交：</code>42路，45路44路32路55路观光2号线</p>
+                    </div>
+                  </li>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper66">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/b9/8b/4d/5f82b2dc79ec7584e6183df69ab2904914c8d3b9.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/f8/8b/0a/052efd427b73b3f760bd6a7188dda94fe1091fd3.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/2f/bb/58/ba02e1e84458ea8f9a592e4cdda51c5469ee64fc.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/f5/fd/9f/e34398706b2df704451ffbb03a19612600713ed9.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>南通瑞慈瑞运体检中心</h3>
+                      <p><span>体检地址：</span>南通市通州区金新街道综艺金融港金融街401、402铺</p>
+                      <p><span>机构休息：</span>周一休息</p>
+                      <p><span>附近交通：</span><br /><code>1.公交：</code>交通运输管理处站（233路）；通州邮政站（271路）</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module">
+                    <div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabcont hidden">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper26">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/8a/06/01/1fac06f87067b7a2a0ff71270a6e01b02ed35175.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/f6/df/d9/33858f4d543c14ea83ae08bb0bb988d24ab194ed.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/d7/5a/bd/35e24669e99bebec2255b1e18cebb8838a9c16b6.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/b8/66/d4/3023e5b7a35c998e95983d9a785f0c04f8fb7bf9.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>南京瑞慈秦淮体检中心</h3>
+                      <p><span>体检地址：</span>南京市秦淮区太平南路450号斯亚财富中心4层</p>
+                      <p><span>机构休息：</span>周一休息</p>
+                      <p><span>附近交通：</span><br /><code>1.地铁：</code>3号线：夫子庙站3号口；1号线：张府园站3号口；<br /><code>2.公交：</code>1路、31路：太平南路·白下路站；60路:白下路·长白街站；82路：白下路站；46路、26路：内桥站；304路：长白街站</p>
+                    </div>
+                  </li>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper55">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/a7/95/1f/d808a0e9e3101f04349223eb7a3b955c44f6daf5.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/bd/eb/90/be80c846576bf72a233de346b3e55ca8bd1884bf.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/cd/65/53/96dfa9726e8b68f20d56e98a568fb1d25ee2cc8b.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/a8/2b/8a/0d8b71835a6b15eda0bf352b7dfffdaae776bd5d.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>南京瑞慈江北体检中心</h3>
+                      <p><span>体检地址：</span>南京市江北新区大桥北路48号弘阳家居南京桥北店（宜必思酒店弘阳店）A4馆5层</p>
+                      <p><span>机构休息：</span>周一休息</p>
+                      <p><span>附近交通：</span><br /><code>1.自驾：</code>自驾方便，停车位充足；<br /><code>2.公交：</code>502，D2，D10 路；</p>
+                    </div>
+                  </li>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper20">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/d0/12/fa/a95b8c0f5aff97c319d5af92ed2233cde6cbda76.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/6c/c4/66/78587dbd8b965ebd83ff94c91c0467b7074d91c1.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/ca/ba/65/1cd056f636be93037f711787725398989a97d52c.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/2f/98/90/7da0c54a7c2aee362ce348dcd1aa52512e85d93c.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>南京瑞慈建邺体检中心</h3>
+                      <p><span>体检地址：</span>南京市建邺区云龙山路99号省建大厦A、B栋1-2F</p>
+                      <p><span>机构休息：</span>周日休息</p>
+                      <p><span>附近交通：</span><br /><code>1.地铁：</code>10号线中胜站；<br /><code>2.公交：</code>河西大街-中胜东站：96、153、158、129、186</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module">
+                    <div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabcont hidden">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper8">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/99/1e/a9/3e58b9709ac6adfb1af8e8e9fb5d178c1be21374.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/fc/3e/30/4650dc80e874a6efbee1a984c65dd762ad9bd09b.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/3a/02/e2/916a32706168b77786476716449911f04bc90de5.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/40/ee/07/eca9c7e10007939c7499947c7a11dc0d26217df0.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>苏州瑞慈高新体检中心</h3>
+                      <p><span>体检地址：</span>苏州市高新区珠江路117号创新中心大厦B座4-5层</p>
+                      <p><span>机构休息：</span>周一休息</p>
+                      <p><span>附近交通：</span><br /><code>1.地铁：</code>1号线：汾湖路站3号口；<br /><code>2.公交：</code>511路、38路、89路、2路、35路：新升新苑南站；69路、69路区间、317路、39路：新升新苑北站；89路、511路、301路：万枫家园站；64路、622路、38路：新区水厂站</p>
+                    </div>
+                  </li>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper34">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/5d/c3/2a/74c748d8b3a2cee81bb4c513b3c3c2ee417007dd.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/ae/77/91/b49b7382da2e53a24be9439c6531e87af46a9d9e.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/03/ea/2a/88f8afea67a1ca90eb8b37a67a6cb4db5094af86.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/d7/fc/f7/531b052fed9e0a96780a7dbe7c96aedfe5c74196.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>苏州瑞慈园区体检中心</h3>
+                      <p><span>体检地址：</span>苏州市工业园区苏州大道西2号国际大厦2F</p>
+                      <p><span>机构休息：</span>周二休息</p>
+                      <p><span>附近交通：</span><br /><code>1.地铁：</code>地铁一号线：星海广场站 3号出口<br /><code>2.公交：</code>国际大厦西站：28、818、106、178、26、47、160 星海广场站：4、108；<br /><code>3.自驾：</code>苏州大道西与星汉街交叉路口；</p>
+                    </div>
+                  </li>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper74">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/66/dc/7a/a80c08d4803fa5ed3fc37dbaaad1d2629bc93740.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/46/e6/de/3d0b5e8e2f65cbdaec4233abb19617c81bc14642.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/11/3e/07/b56a2eebdb95c84cf4886327e1b0fea946c0ba1f.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/af/60/a1/30a31dead47238ee85d5e3590f2a720053c9998d.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>苏州瑞慈姑苏体检中心</h3>
+                      <p><span>体检地址：</span>苏州市姑苏区三香路 1338 号铂金大厦裙楼 5 层</p>
+                      <p><span>机构休息：</span>周三休息</p>
+                      <p>
+                        <span>附近交通：</span><br /><code>1.地铁：</code>1 号线-西环路站-2 号出口-步行 949 米<br /><code>2.公交：</code>体育中心首末站（40 路（东线）、40 路（西线）、60 路（北线）、60 路（南线）, 附二院医院站（2 路、303 路、304 路、308 路、312 路、35 路、38 路）<br /><code>3.自驾：</code>停车位充足（铂金大厦负三，免费停车 1 小时，1 小时后自费，2 元/半小时），或
+                        附近社会公共收费停车场（体育公园停车场、体育场停车场，步行 100 米）
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module">
+                    <div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabcont hidden">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper36">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/53/ff/0b/d148881c645295aa1c66ba597238aefd987a7254.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/9e/a9/90/d378690cc64a6bc6c2f3dd5276df184041d7cdec.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/d8/f8/08/d3358ff4c21b7e60293bf67cb02526fe04e6596a.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/f5/7c/4f/fb8e8d72e2cf3bab5b6da09874f3096571f4f542.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>扬州瑞扬体检中心</h3>
+                      <p><span>体检地址：</span>扬州市邗江区扬子江北路108号1-2层1003铺</p>
+                      <p><span>机构休息：</span>周一休息</p>
+                      <p><span>附近交通：</span><br /><code>1.公交：</code>扬子江北路梅庄新村站：107、5、11、50、81、39、55；</p>
+                    </div>
+                  </li>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper79">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/cd/ca/5c/7c171753fef5e949ef0027a13a62a007387e7728.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/e3/46/ba/8d731dc8c8a20874f40a48e5b7ce81eab021c37a.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/aa/be/ea/d7d1c9ed1d6078b088e6773929f52273929f5ea7.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/79/08/10/53757fe54405ebb22f792f92f5641cc2c600dec0.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>扬州瑞韵体检中心</h3>
+                      <p><span>体检地址：</span>扬州市广陵区京杭中路3号6幢101室--2楼3楼（广陵店又名韵河湾店）</p>
+                      <p><span>机构休息：</span>周二休息</p>
+                      <p><span>附近交通：</span><br /><code>1.公交：</code>32路，58路，87路，88路，89路，90路，K1路<br /><code>2.自驾：</code>韵河湾地下停车场，停车位充足，暂时免费</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module">
+                    <div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabcont hidden">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper17">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/cd/c4/07/2075ecae0d630bc3d6d0aae085e8c89498580ba6.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/4d/63/50/b7c95c07f22d5a833d9f66a2bee7e490480f267c.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/40/b8/57/18c514792c058907f47c63beda5cb11d16f87b93.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/b8/91/0f/f7b4c5ba18a26afd7bfe3d5349c556dae771f4d4.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>常州新北区体检中心</h3>
+                      <p><span>体检地址：</span>常州市新北区龙锦路1590号现代传媒中心3号楼5层(近太湖东路)</p>
+                      <p><span>机构休息：</span>周一休息</p>
+                      <p><span>附近交通：</span><br /><code>1.公交：</code>24路：府琛花园站；h1路环线、50路：太湖路通江路站；47路：行政中心北门站；19路：惠山路太湖路站；46路：汇丰新村站；</p>
+                    </div>
+                  </li>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper75">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/cb/59/d5/5558460529ae7d7e4bc9234caccc81e8b1819baf.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/77/2e/a5/3539defb3dc178e6a17c23ca66b06afcddd376a8.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/3c/30/4a/0e6a91097ec84adeabf043cc42d78d3ed068d536.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/5f/f8/90/e1a65b19c642980a1b9ee5ef2e3fb028968d418b.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>常州武进体检中心</h3>
+                      <p><span>体检地址：</span>常州市武进区延政中路5号常发大厦裙楼3楼</p>
+                      <p><span>机构休息：</span>周二休息</p>
+                      <p><span>附近交通：</span><br /><code>1.地铁：</code>1 号线-延政大道地铁站-1号出口-步行 552 米；<br /><code>2.公交：</code>4B路、B11路、74路、503路、76A路、76路、317路、319路、69路、74-1路、2路、66路、302路、306路、320路、361路、362路、363路、364路、70路、75路、501路、502路、14路、H4路环线、H3路环线等。<br /><code>3.自驾：</code>停车位充足</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module">
+                    <div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabcont hidden">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper40">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/a3/0d/5d/922ba71811736e6ae8b425a4a2a99a456383c518.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/b5/09/13/6ae212db338ad9727e88e7db23d9230cce572054.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/07/b8/44/d495efd73e4c0080a2186082c867a6bdf791b318.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/f7/41/94/85f8068945f441171e1dd5d1b43214717a5e99d4.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>徐州瑞徐体检中心</h3>
+                      <p><span>体检地址：</span>徐州市解放路246号文峰大厦4层</p>
+                      <p><span>机构休息：</span>周一休息</p>
+                      <p><span>附近交通：</span><br /><code>1.公交：</code>和平路站：11路，11路附，19路，20路，39路，51路，61路，62路，64路，65路，83路，118路，199路，609路，837路，838路，游1路，游2路;师大北门站：2路，11路，11路附，606路，64路，49路，608路，70路，8路;</p>
+                    </div>
+                  </li>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper78">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/b9/b4/b9/0de79f1769dceb7d82aeb854c37bff1c0a039330.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/f5/cd/cb/06810cc309206f395bd853ac3149b3704763e337.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/fb/e7/a3/9c741652c6e032d934d79b7bb025166b0420b7f1.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/a8/cc/d8/51f0c54ca353b864f52e7ebc642b0a2974d0cb97.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>徐州瑞彭体检中心</h3>
+                      <p><span>体检地址：</span>徐州市云龙区庆丰路10号云龙华府商业A2座3楼</p>
+                      <p><span>机构休息：</span>周二休息</p>
+                      <p>
+                        <span>附近交通：</span><br /><code>1.公交：</code>乘坐地铁1号线至庆丰路站，从3号口出（庆丰路与和平大道交 叉口东北角），出站步行至云龙华府商业A2座3层可达瑞慈体检；<br /><code>2.公交：</code>庆丰路站：50路，65路，612路； 万达广场站：70路，72路，79路，97路，城际906路； 云龙区政府站：18路，32路，72路，79路；<br /><code>3.自驾：</code
+                        >如客户驾车前来，至云龙华府商业入口进入停车场；
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module">
+                    <div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabcont hidden">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper37">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/be/ea/61/7929fa456ad5d84c2d348ed39afd005bb4c70bfe.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/05/49/40/3ba98373415fe472d7bbaaaa887eb6bf728b2d28.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/31/e6/d8/bbdc8427cd0a1dadfe056841cc7977d7542dd238.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/ce/0c/09/eb574cc139b5a601284179f6acb69708cba05822.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>无锡瑞慈体检中心</h3>
+                      <p><span>体检地址：</span>无锡市滨湖区湖滨路688号华东大厦（裙楼）2层</p>
+                      <p><span>机构休息：</span>周一休息</p>
+                      <p><span>附近交通：</span><br /><code>1.公交：</code>北桥站（508/1/11/33/131/36/56/快6/快3路）;</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module">
+                    <div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabcont hidden">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper25">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/6f/5b/71/026b1c00491cac732b6ec7c0c47e01a5641a06bc.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/e1/f9/50/486343c90a0694bfd0a1497607f4ffc6a85cdf5b.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/1f/69/43/51a917e64482c17c4094d14c2089cfbdb3ed218d.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/07/9d/4a/db9557a6f3545283ffefa0fb43165d424e447e01.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>镇江瑞慈体检中心</h3>
+                      <p><span>体检地址：</span>镇江市京口区解放路26号东大院05栋4-5层</p>
+                      <p><span>机构休息：</span>周一休息</p>
+                      <p><span>附近交通：</span><br /><code>1.公交：</code>乘坐公交车16路在市图书馆下车，步行400米到达。或乘坐10路至正东路，步行500米到达。有多路公交车到达附近车站（39路、81路、116路等）可以在市图书馆、镇江影剧院、正东路等站点下车；</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module">
+                    <div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabcont hidden">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper60">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/23/80/13/bd91a17081f437bc7c85f53e1137c81c34523862.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/3c/03/21/2e692e342013286ea53800c444e31dbb74a6c6c8.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/9f/e5/8b/5a95ff0fc0264aecbd580de718bfc51c729bffc9.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/7a/4d/97/b23e0b29a4b4a96b6541fb8a1e0a6550f54b2773.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>盐城瑞慈体检中心</h3>
+                      <p><span>体检地址：</span>盐城市世纪大道611号（解放路与世纪大道交叉口）凤凰金宝广场商场5楼（商场2号门电梯直达5楼）</p>
+                      <p><span>机构休息：</span>周一休息</p>
+                      <p><span>附近交通：</span><br /><code>1.公交：</code>①、凤凰文化广场站（途经：18路、36路、39路、206路）；②、世纪大道站（途经：B1路、B2路内环、B支2路）</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module">
+                    <div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabcont hidden">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper67">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/03/c5/75/b315f40a8830918c4d9f3fa0e73af79670e9fd39.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/bc/04/4c/699863a24ef730355db61b1957c22e6e5918d539.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/00/03/72/1cc78e003da31af04345a1cf6447baebfe84e3b4.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/6e/c4/1f/a16933532218cd59abee0532267b72ebdd03e1fa.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>淮安瑞慈体检中心</h3>
+                      <p><span>体检地址：</span>淮安经济技术开发区深圳路6号金鑫国际广场1号楼2、3楼</p>
+                      <p><span>机构休息：</span>周一休息</p>
+                      <p><span>附近交通：</span><br /><code>1.公交：</code>07路、18路、28路、38路、4路、717路、93路、游3路、游7路至深圳路(公交站)下，步行144米,到达目的地 。有轨电车1号线：深圳路站下车，步行631米,到达目的地。</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module">
+                    <div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabcont hidden">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper71">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/73/2e/3d/1c5bdc769ea794f44a6c3215350aead743af2867.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/29/84/ee/c029de0ff4eb2cfeee2c2e0a243b8b869b72fea5.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/03/fd/49/a3f29746943d7ba07c30ef3efe6c9741206d422b.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/de/16/ac/f255c0e6fd327f3031a48b9531988b598ae0ac9a.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>宿迁瑞慈体检中心</h3>
+                      <p><span>体检地址：</span>宿迁市宿城区洪泽湖西路88号恒力大酒店南辅楼二楼三楼</p>
+                      <p><span>机构休息：</span>周日下午及周一全天休息</p>
+                      <p><span>附近交通：</span><br /><code>1.自驾：</code>提供免费停车位<br /><code>2.公交：</code>宿迁海关站(81路;92路;202路;301路;302路;303路;313路;326路;808路;火车站专线1夜班车;游3路)；</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module">
+                    <div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabcont hidden">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper82">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/1f/f9/e9/84c85808fb62a2de78e7297d98597a9a10195975.jpg" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/3e/61/20/abe4dc99a6984a7d8019b040b88bc7aab8704f6f.jpg" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/35/ba/06/1264bc6b72d9ae38724ce1cb9eed6d69708d1d49.jpg" /></li>
+                        <li class="swiper-slide"><img src="" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>泰州瑞慈体检中心</h3>
+                      <p><span>体检地址：</span>江苏省泰州市海陵区永定路288号金融广场1号楼3-4层</p>
+                      <p><span>机构休息：</span>周一休息</p>
+                      <p><span>附近交通：</span></p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module">
+                    <div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="listcon beijing">
+            <div class="list-con">
+              <span class="now">北京市</span>
+            </div>
+            <div class="listul">
+              <div class="tabcont">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper30">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/5f/cb/a2/de9e2a3766a5fe9cf3b104642df6d37cbddfac36.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/bd/ef/d2/80603f1b9bdd64d7c59ad0c53121bd70058fa53f.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/a7/f0/e8/d3a070f05e208d132926b746acf3f09664b8d202.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/c0/af/ea/387cf9ff0dcf88d49f22ae0fcb97073998e6e349.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>北京瑞慈三里屯体检中心</h3>
+                      <p><span>体检地址：</span>北京市朝阳区工体北路8号院三里屯SOHO六号商场3楼</p>
+                      <p><span>机构休息：</span>周一休息</p>
+                      <p><span>附近交通：</span><br /><code>1.地铁：</code>10号线：团结湖站D口；<br /><code>2.公交：</code>43路：朝阳医院站；120路、110路：工人体育场站；140路：东大桥路口东站；115路、701路、431路：三里屯站</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module">
+                    <div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="listcon zhejiang">
+            <div class="list-con">
+              <span class="now">杭州市</span>
+              <span>湖州市</span>
+            </div>
+            <div class="listul">
+              <div class="tabcont">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper39">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                          <img src="https://www.ruicitijian.com/public/images/87/39/47/8705482a984f5dd26202cd410eff2a6e2e444380.png" />
+                        </li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/06/19/fd/9ffa119ca5f10a7a34fa6fd86b3542ea5a8f068e.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/69/b9/b7/373b0c5b8bd8e8fa78722176a434bec5cc0a9939.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/e8/af/f3/b0bcb63766238d73f61b34d411a8a497e2a31ccf.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>杭州瑞慈延安体检中心</h3>
+                      <p><span>体检地址：</span>杭州市拱墅区延安路468号B座4楼</p>
+                      <p><span>机构休息：</span>周一休息</p>
+                      <p><span>附近交通：</span><br /><code>1.地铁：</code>地铁1号线2号线凤起路D4出口即达；<br /><code>2.公交：</code>凤起路皇亲巷站（途经：5路;13路;14路;21路;72路;78路;201路;219路;271路）孩儿巷站（途经：5路;46路;55路;56路;92路;133路;188路;206路;216路;251路;290路;295路;400路;k155路;游8线/y8）</p>
+                    </div>
+                  </li>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper76">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/89/bc/be/da331f39159222e70cf92e96f020b6926625b2ab.png" style="" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/2f/4e/2a/3a856da16590b6196b80550b34585ead7fc29566.png" style="" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/b9/48/30/f888ff06bd2bad876d5786770afd40a0f659ff0e.png" style="" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/ad/22/dd/2d4dea8356843a3fd2823124ca608c877fe6ffb1.png" style="" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>杭州瑞慈瑞江体检中心</h3>
+                      <p><span>体检地址：</span>杭州市上城区市民街66号钱塘航空大厦4楼401室</p>
+                      <p><span>机构休息：</span>周二休息</p>
+                      <p><span>附近交通：</span><br /><code>1.地铁：</code>四号线D出口（城星路站）;<br /><code>2.公交：</code>森林路市民街口（途经：320路）;</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module">
+                    <div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabcont hidden">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper56">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/94/30/9e/232131e8f6be15db0b6349aee332c1182722747d.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/d0/50/88/2d379062df71309112f06ee1007eee6a557d09b2.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/9c/74/ef/50e5d66064b13cb69f565c11177bfd2b3a650e4a.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/2e/d0/d7/0e52a3eb67ed210f534442aef9728c049c055f8a.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>湖州瑞慈体检中心</h3>
+                      <p><span>体检地址：</span>浙江省湖州市吴兴区爱山广场6号楼3-4F</p>
+                      <p><span>机构休息：</span>周一休息</p>
+                      <p><span>附近交通：</span><br /><code>1.公交：</code>1.银泰商厦公交站（途经：1路;5路;10路;15路;34路）2.府庙公交站（途经：3路;7路;8路;11路;12路;13路;30路;43路;54路）3.浙北大厦公交站（途径：2路;4路；13路；14路；22路；36路；37路；41路；南部公交专线）</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module">
+                    <div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="listcon shandong">
+            <div class="list-con">
+              <span class="now">济南市</span>
+              <span>青岛市</span>
+            </div>
+            <div class="listul">
+              <div class="tabcont">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper64">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/db/e2/db/a9254c8dd16bb7bd002ffc454bce0d7cdbd22461.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/3c/33/8e/6e55449308cb2c8166e86cd02a777212d211b4ee.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/b6/39/32/e0e55499d16efe7593b421be18ee2156fdfe01fb.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/45/72/e3/0df57a0c8dce4d24449ed50858c4a644d0cbbdc5.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>济南瑞慈瑞济体检中心</h3>
+                      <p><span>体检地址：</span>济南市历城区辛祝路81号夏都金地商业广场2楼</p>
+                      <p><span>机构休息：</span>周一休息</p>
+                      <p><span>附近交通：</span><br /><code>1.公交：</code>①辛祝路南口，途径路线K30路，K118路118路，K201路，K80路；②花园路华信路站（北行200米路西）途径线路：11、K11、K91、106、K106、K138、K163、308路线路</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module">
+                    <div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabcont hidden">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper49">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/b9/6b/d9/3aa46e8bf6e326a5ac5ef9288e0d3f9a84708652.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/a7/1b/2c/f6e60c0ae27fcc7f01f280d6eb2e6dbadace22e8.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/4a/87/39/a28d7e2ddfdf7d6ed3cf298191a774abc37f3125.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/ff/80/70/998583f25a75b51eb896e68bb1e40b720ae899a3.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/2d/26/46/23cf3e8fa2691a08895567f2942530ca0ff2fdf9.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>青岛瑞慈市南体检中心</h3>
+                      <p><span>体检地址：</span>青岛市市南区闽江路2号国华大厦4楼</p>
+                      <p><span>机构休息：</span>周一休息</p>
+                      <p><span>附近交通：</span><br /><code>1.地铁：</code>地铁3号线五四广场站B2出口<br /><code>2.公交：</code>605路;224路;374路;223路.318路;761路;（万象城站下车）</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module">
+                    <div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="listcon guangdong">
+            <div class="list-con">
+              <span class="now">广州市</span>
+              <span>深圳市</span>
+              <span>佛山市</span>
+            </div>
+            <div class="listul">
+              <div class="tabcont">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper28">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/c3/eb/f5/b267247655ae3a0bd04ca57fd39addd528303a3f.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/8a/19/a9/319b67635acf23c879f2dc58f70a7012b0054b31.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/50/89/62/937193fd3a0c9ef8654161b07e6d5ea9992cf8b7.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/a8/5c/fe/d61d1fa5bf4a54940eddf7f0a04f3ef845c43172.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>广州瑞慈天河体检中心</h3>
+                      <p><span>体检地址：</span>广州市天河北路366号都市华庭3楼</p>
+                      <p><span>机构休息：</span>周一休息</p>
+                      <p><span>附近交通：</span><br /><code>1.地铁：</code>地铁一号线的客户，请在体育中心站下车，从B出口出站。APM线的客户，请在林和西下车，从C出口出站。地铁三号线北延段（番禺广场↔机场南）的客户，请在林和西下车，从C出口出站。</p>
+                    </div>
+                  </li>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper81">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/5e/38/7c/b8f8d4c2ef97cb1affb53ba2a751400547a814e9.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/43/3f/da/399fa837fe3f86d8faa88ad7fff48a6d4531ecd9.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/9e/3a/74/96f5c5957a24b5daa36f21e19345a1462c8515da.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/17/d5/5e/b27e024189579c64032b914debbf37bd6b03b3ac.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>广州越秀体检中心</h3>
+                      <p><span>体检地址：</span>广州市越秀区中山五路219号九层01</p>
+                      <p><span>机构休息：</span>周二休息</p>
+                      <p>
+                        <span>附近交通：</span> <br /><code>1.地铁：</code>地铁一、二号线(公园前地铁站A出口); <br /><code>1.公交：</code>中山五路公站：7 路、24 路、27路、 102路、 107 路、108 路、182路、191路、215 路、215路长线 233 路、243路、 264 路、528 路、833路、 起义路公交站：6 路、14 路、29路、 64路、 104路、 253路、 519路、夜107路、夜22路、 夜5路、 夜8路 朝天路公交站：56路、 58路
+                        教育南路公交站：14路、夜5路 解放中路公交站：5路、6路、 29路、 64路、 87路、 88路、 101路、 104路、110路、113路、 124路、 180路、 182路、 209路、 244a路、244路、250路、273路、519路、527路、527路机电技师学院班车、高峰快线39路、广281路
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module">
+                    <div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabcont hidden">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper10">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/9e/68/d0/fd21df197f3b26cf0594af681a79a71297a32a21.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/4b/32/3a/b9e817b1250d940d675464fba04040db466d9938.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/d1/0c/f0/35e1786f50f77ca9319657261ca825fa90daa187.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/10/cd/08/443051b0381a81582083393df51edd56924ba5a1.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>深圳瑞慈南山体检中心</h3>
+                      <p><span>体检地址：</span>深圳市南山区高新技术产业园北环大道北松坪山路1号源兴科技大厦东座4楼</p>
+                      <p><span>机构休息：</span>周一休息</p>
+                      <p><span>附近交通：</span><br /><code>1.地铁：</code>1号线：高新园站A口；<br /><code>2.公交：</code>237路、m240路、m364路、49路：北环铜鼓天桥站；32路：松坪山总站；36路、66路、334路：松坪村站</p>
+                    </div>
+                  </li>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper73">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/1c/7b/28/e59ca931b070683e4ea4d5803e69e8fe9a707ebd.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/88/f6/f5/d78bdaa35acea98e278847f1321b56e8c35c9afc.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/47/40/1d/d9af64e52febe26c4b79b4c7a5cd47c8156135c6.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/5a/68/18/856a2441578f3f35716cb37b214d21aa5dcc2c70.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>深圳福田体检中心</h3>
+                      <p><span>体检地址：</span>深圳市福田区新洲南路2008号新洲同创汇C座4层</p>
+                      <p><span>机构休息：</span>周二休息</p>
+                      <p><span>附近交通：</span><br /><code>1.地铁：</code>七号线（沙尾站）、三号线（益田站）<br /><code>2.公交：</code>石厦南（4/44/362/b957/m120/m389/m390/m454/m499路）；市文化创意园（4/44/362/b957/m120/m389/m390/m454/m499路）；妇幼保健院（26/71/80/103/317/339/377/b685/m120/m347/m433/m441/m453/m500路）</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module">
+                    <div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabcont hidden">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper51">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/ed/52/a7/54b2ca776c7303b1893d8ecd57097017e636d38f.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/eb/c5/49/e487a78ff47860cfde93b9fd6c611344bddc8ff0.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/47/a6/27/d57f454528ff4ddba13553e75921c781dab79e1b.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/50/6f/3f/b4425bc9f9e523af56fc49b4ca1b8832f9a653ac.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>广东瑞慈佛山体检中心</h3>
+                      <p><span>体检地址：</span>广东省佛山市禅城区汾江南路18号雅庭国际广场5层（走地铁a出口）</p>
+                      <p><span>机构休息：</span>周一休息</p>
+                      <p><span>附近交通：</span><br /><code>1.地铁：</code>广佛线季华园站A出口 <br /><code>2.公交：</code>季华园地铁站，途径：G14，118,133,154,158,160,801，高峰3</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module">
+                    <div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="listcon anhui">
+            <div class="list-con">
+              <span class="now">合肥市</span>
+            </div>
+            <div class="listul">
+              <div class="tabcont">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper18">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/d1/05/4a/d3bcaac2a95edf53ca3c27d739f962228af1b9e4.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/bb/66/bc/447fc6d263250f1e97a5ac7dec18dbec7ad11e5e.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/73/41/a8/b8b3f2dea2ac3e18ab3c8218d36cc5e9571dd486.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/36/3b/70/8ea1b08020fa1e44bdf82d22106bb7dc3ffe4c1e.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>合肥瑞慈蜀山体检中心</h3>
+                      <p><span>体检地址：</span>合肥市蜀山区潜山路与佛子岭路交口东100米 瑞慈医疗A座 （银泰城北门）</p>
+                      <p><span>机构休息：</span>周一休息</p>
+                      <p><span>附近交通：</span><br /><code>1.公交：</code>56路、41路、166路、104路、105路：华邦世贸城站；66路、64路、18路：蔚蓝商务港站</p>
+                    </div>
+                  </li>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper54">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/13/20/64/dc19debf2d131839f12c19f09319b5649d28fa23.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/90/0b/75/e97ada81f9446e9fdca3f9e47158b53362cb87e6.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/4e/51/00/7ed3e48711e7ec7aca4d482de7d7ac08e0ab60a8.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/59/41/6e/173896f2183512a46f225d439ac2649317ac50dc.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>合肥瑞慈高新区体检中心</h3>
+                      <p><span>体检地址：</span>合肥市高新区（创新大道与彩虹路交口）创新国际大厦4楼</p>
+                      <p><span>机构休息：</span>周二休息</p>
+                      <p><span>附近交通：</span><br /><code>1.地铁：</code>2号线汽车西站D口出口，沿创新大道往南800米；<br /><code>2.公交：</code>创新大道站（665路）下车即到；</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module">
+                    <div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="listcon hubei">
+            <div class="list-con">
+              <span class="now">武汉市</span>
+            </div>
+            <div class="listul">
+              <div class="tabcont">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper19">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/46/9b/e7/8e2d1bd4b48218f4507c478666b7790e9d5d3eaf.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/35/24/ec/25f5c8dc4be574557f2c378616a5d35b22fc2f04.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/3f/26/81/3779a72f252cfc2e86bb093b551f2bcd872e8a29.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/9b/df/85/1c0c746d6a838890dd62ad57df5806b7d7fd3d17.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>武汉瑞慈硚口体检中心</h3>
+                      <p><span>体检地址：</span>武汉市硚口区沿河大道466号盛世滨江生活汇3层</p>
+                      <p><span>机构休息：</span>周一休息</p>
+                      <p><span>附近交通：</span><br /><code>1.地铁：</code>轨道交通1号线：汉西一路站C口；3号线：宗关站D口；<br /><code>2.公交：</code>512路：汉西一路沿河大道口站；548路：解放大道汉西一路站；619路：沿河大道建一路站；780路 ：汉西一路站</p>
+                    </div>
+                  </li>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper52">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/38/61/9e/f51a0403d7b0b4afeda9efc35d81def5f12a47f4.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/3e/7c/62/26c0d3db4097edfdf19a9f5ba5038ec15036b3bb.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/c4/e9/fd/e5729b33e59f1c45d4bfe1b83d74ee33068f25c4.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/0f/a5/5c/7ad0ec1903f1050f337918632900cd02c8ead62d.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>武汉瑞慈瑞岳体检中心</h3>
+                      <p><span>体检地址：</span>武汉市武昌区徐东路50号（山河企业大厦5楼）</p>
+                      <p><span>机构休息：</span>周一休息</p>
+                      <p><span>附近交通：</span><br /><code>1.地铁：</code>地铁4号线和地铁8号线直达岳家嘴地铁站A出口，出口左边即是山河集团大厦5楼 <br /><code>2.公交：</code>徐东大街岳家嘴公交站702,805,530,102,577,724,62</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module">
+                    <div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="listcon hunan">
+            <div class="list-con">
+              <span class="now">长沙市</span>
+            </div>
+            <div class="listul">
+              <div class="tabcont">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper41">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/80/f9/2d/cd1570b46829d3d13251974b140610fcf0684e9e.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/77/fb/83/7c3640867859f867a6c8b3491ed0d9ae919b8e87.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/03/0a/13/84c632d3520cef71fa8d61cc6cc3ff34c2553a9e.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/b3/51/a9/c1879c9dadcd70235ed96066ff483ac6b1739d2c.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>长沙芙蓉体检中心</h3>
+                      <p><span>体检地址：</span>湖南省长沙市五一路65号长沙大厦2楼</p>
+                      <p><span>机构休息：</span>周一休息</p>
+                      <p><span>附近交通：</span><br /><code>1.公交：</code>12路、104路、105路、111路、113路、117、118、225、317、401、405、803</p>
+                    </div>
+                  </li>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper42">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/68/7d/f6/ad76f61112173a6b602592b7b2afd10b798da887.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/03/35/0b/eafe0edb205ee0150b1444f632e8d7aaca4d8413.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/4e/fc/3e/a5afd50efaea8792c1db1fdcf4e9646d1c04c3d8.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/d1/22/07/a188ffbfd23720fa9bd2565d490ccc69d216454b.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>长沙天心体检中心</h3>
+                      <p><span>体检地址：</span>湖南省长沙市天心区友谊路413号运成大厦204房</p>
+                      <p><span>机构休息：</span>周五休息</p>
+                      <p><span>附近交通：</span><br /><code>1.地铁：</code>地铁1号线友谊路口站4号出口，直行100米（运成大厦二楼）<br /><code>2.公交：</code>141、125、226路；友谊路芙蓉路口站：途经线路：临103、140、116等路线；</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module">
+                    <div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="listcon sichuan">
+            <div class="list-con">
+              <span class="now">成都市</span>
+              <span>内江市</span>
+              <span>遂宁市</span>
+            </div>
+            <div class="listul">
+              <div class="tabcont">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper16">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/b3/c8/63/62249d23aec28baebe4e01642837dae60ec7c0c4.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/49/09/eb/3c2ea031903788c0b967fbb77857428b37473398.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/fa/2e/2e/dc0ddcf1193b4c38366aa84a7284cdc183f41fc9.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/b7/0f/c1/ee81112f9e1047aa86138d0140893e9aae12e592.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>成都瑞慈锦江体检中心</h3>
+                      <p><span>体检地址：</span>成都市锦江区一环路东五段8号天府国际大厦3-4楼（成都九眼桥北）</p>
+                      <p><span>机构休息：</span>周日休息</p>
+                      <p><span>附近交通：</span><br /><code>1.地铁：</code>2号线：牛王庙站A口；<br /><code>2.公交：</code>335路、21路：牛王庙公交站；82路、68路、343路：九眼桥西站；102路、72路、27路、g27路、92路：九眼桥北站；</p>
+                    </div>
+                  </li>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper21">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/51/16/9b/baecb28316edbf499086d0d7aef27c8d880261d7.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/fd/b4/72/46926d839ec70bcbbcd0460e9acc92d511edf3f8.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/1d/28/d9/e232492947eca06e6633c3e7b126b17ec41643c2.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/24/60/5a/474460615fbf2481416c5b3864f507dc3f748c3c.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>成都瑞慈温江体检中心</h3>
+                      <p><span>体检地址：</span>成都市温江区光华大道三段1588号珠江国际写字楼8层</p>
+                      <p><span>机构休息：</span>周一休息</p>
+                      <p><span>附近交通：</span><br /><code>1.地铁：</code>地铁4号线到光华公园站G2出口（步行380米即到）<br /><code>2.自驾：</code>开车的客户，请将车停在伊藤洋华堂地下停车场的橙色区域，乘写字楼电梯上8楼</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module">
+                    <div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tabcont hidden">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper44">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/42/09/b5/cc42c397681230432c045751a07aca06f21f82a4.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/34/eb/3a/f72d6c57cec8ffa5fbe92db28b1aa42ffc7457bf.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/8f/c0/4b/aa9840864d5e09bda5bc2860a89f00afd59a4223.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/65/11/c2/da527809d2eb21e983344470909cef056bdf8080.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>瑞慈内江体检中心</h3>
+                      <p><span>体检地址：</span>四川省内江市市中区甜城大道内江商贸城建材b馆4楼</p>
+                      <p><span>机构休息：</span>周日休息</p>
+                      <p><span>附近交通：</span><br /><code>1.公交：</code>周边公交路线：105/111/130/302/319</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module">
+                    <div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabcont hidden">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper58">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/56/21/7f/691c9f0239729ac8fe654a0bada36779f4b176f2.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/5f/3e/15/5f5b91808fc12bd9381eb04405e8d1cee6baf608.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/da/71/bf/f34eff7f0c4ae3341f8e6714922558466d83b24e.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/de/c6/04/7aeee23ab60dc398096cc9757e34498fa9e50797.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>瑞慈遂宁体检中心</h3>
+                      <p><span>体检地址：</span>四川省遂宁市船山区和平西路225号4层</p>
+                      <p><span>机构休息：</span>周日休息</p>
+                      <p><span>附近交通：</span><br /><code>1.公交：</code>4路、9路、3路、203路、16路</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module">
+                    <div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="listcon liaoning">
+            <div class="list-con">
+              <span class="now">沈阳市</span>
+            </div>
+            <div class="listul">
+              <div class="tabcont">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper46">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/3e/a2/37/e1b9218a47395fb8f23f100f18eaf21ce209a4a6.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/d6/37/1c/016f98bce22438044b249c342ea5d77f0bc08757.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/64/6b/5a/8cf5c143fd2df8f797d6bc7c663d3824d589ed65.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/b7/d0/7e/4172e4fe7c02ea20bd580ef1d231b09fd7ac7699.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>辽宁沈阳体检中心</h3>
+                      <p><span>体检地址：</span>沈阳市铁西区兴工北街53号瀚都国际大厦3-4层</p>
+                      <p><span>机构休息：</span>周一休息</p>
+                      <p><span>附近交通：</span><br /><code>1.公交：</code>距沈阳站西广场200米，多条公交线路，沈阳站西广场站：102路、170路、201路、251路、284路、233路、114路、281路、284路、299路、128路。兴工街北二路站：129路、161路、162路、252路、202路、210路、277路、299路、114路等多条公交线路。</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module">
+                    <div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="listcon fujian">
+            <div class="list-con">
+              <span class="now">厦门市</span>
+              <span>泉州市</span>
+            </div>
+            <div class="listul">
+              <div class="tabcont">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper47">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/5d/89/5e/c5d1bc3866d3fff9a7a4ef738bac20f9411f5e1a.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/03/fc/f3/d0ac0712a518aac4f4a64647bea5c1c776b46dd1.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/3d/ec/c7/5b04e1f69b13e7344c280ce24cb803e268cefeec.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/a4/21/d0/d76c3218e696268488f866a6d8766b165b641a8a.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>厦门体检中心</h3>
+                      <p><span>体检地址：</span>厦门思明区前埔路508号国金广场C座2层</p>
+                      <p><span>机构休息：</span>周一休息</p>
+                      <p><span>附近交通：</span><br /><code>1.公交：</code>可乘L26/105/50/653路到洪何路口站下车；或乘18/38/39/68/88/94/123/127/308/311路到明发园站下车。</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module">
+                    <div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabcont hidden">
+                <ul>
+                  <li class="list-info">
+                    <div class="list-img swiper-container swiper63">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/12/56/61/2bea12961af468448a7abb059ebc5eeba0f6207e.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/a6/61/5d/59b5253cf6166ce62066db8839f665f2bfdf45af.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/85/91/32/1412ee2c57817f8854333c979c483241d2261608.png" /></li>
+                        <li class="swiper-slide"><img src="https://www.ruicitijian.com/public/images/f0/9f/05/b81d1586902a77f2195ce0e1255475d5e8370c63.png" /></li>
+                      </ul>
+                      <!-- Add Pagination -->
+                      <div class="swiper-diandian"></div>
+                    </div>
+                    <div class="list-txt">
+                      <h3>泉州体检中心</h3>
+                      <p><span>体检地址：</span>泉州市晋江市池店镇泉商环球广场2楼瑞慈体检（希尔顿酒店大堂对面）</p>
+                      <p><span>机构休息：</span>周一休息</p>
+                      <p><span>附近交通：</span><br /><code>1.公交：</code>可乘公交K606;</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="productslist">
+                  <div class="productslist-hd">热销套餐推荐</div>
+                  <div class="productslist-bd index-module">
+                    <div class="colume-wrap"><{widgets code="content-commodity-pictext-point-item-price-buy" id="3055"}></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <{require file="public/footer.html" }> <{SYSTEM_FOOTER}>
+  </body>
+  <script>
+    $(function () {
+      var product_menu = $("#product-menu li"),
+        product_list = $("#product-list .listcon");
+
+      product_menu.click(function (e) {
+        $(this).addClass("active").siblings().removeClass("active");
+        product_list.eq($(this).index()).stop().addClass("current").siblings().stop().removeClass("current");
+      });
+    });
+
+    $(function () {
+      function tab(obj) {
+        $("." + obj)
+          .find(".list-con span")
+          .click(function () {
+            $(this).addClass("now").siblings().removeClass("now");
+            // console.log(1111)
+            // $(this).addClass("now").siblings().removeClass("now");
+            $("." + obj)
+              .find(".listul")
+              .find(".tabcont")
+              .eq($(this).index())
+              .removeClass("hidden")
+              .siblings()
+              .addClass("hidden");
+          });
+      }
+      tab("shanghai");
+      tab("jiangsu");
+      tab("beijing");
+      tab("zhejiang");
+      tab("shandong");
+      tab("guangdong");
+      tab("anhui");
+      tab("hubei");
+      tab("hunan");
+      tab("sichuan");
+      tab("liaoning");
+      tab("fujian");
+    }, 1000);
+  </script>
+  <script>
+    $(function () {
+      function swp(swp) {
+        var swiper1 = new Swiper(swp, {
+          pagination: ".swiper-diandian",
+          loop: true,
+          spaceBetween: 10,
+          observer: true,
+          observeParents: true,
+          paginationClickable: true,
+        });
+      }
+      swp(".swiper2");
+      swp(".swiper3");
+      swp(".swiper6");
+      swp(".swiper7");
+      swp(".swiper8");
+      swp(".swiper9");
+      swp(".swiper10");
+      swp(".swiper11");
+      swp(".swiper12");
+      swp(".swiper13");
+      swp(".swiper14");
+      swp(".swiper16");
+      swp(".swiper17");
+      swp(".swiper18");
+      swp(".swiper19");
+      swp(".swiper20");
+      swp(".swiper21");
+      swp(".swiper23");
+      swp(".swiper24");
+      swp(".swiper25");
+      swp(".swiper26");
+      swp(".swiper28");
+      swp(".swiper30");
+      swp(".swiper31");
+      swp(".swiper34");
+      swp(".swiper35");
+      swp(".swiper36");
+      swp(".swiper37");
+      swp(".swiper38");
+      swp(".swiper39");
+      swp(".swiper40");
+      swp(".swiper41");
+      swp(".swiper42");
+      swp(".swiper43");
+      swp(".swiper44");
+      swp(".swiper45");
+      swp(".swiper46");
+      swp(".swiper47");
+      swp(".swiper49");
+      swp(".swiper51");
+      swp(".swiper52");
+      swp(".swiper53");
+      swp(".swiper54");
+      swp(".swiper55");
+      swp(".swiper56");
+      swp(".swiper58");
+      swp(".swiper60");
+      swp(".swiper63");
+      swp(".swiper64");
+      swp(".swiper66");
+      swp(".swiper67");
+      swp(".swiper70");
+      swp(".swiper71");
+      swp(".swiper72");
+      swp(".swiper73");
+      swp(".swiper74");
+      swp(".swiper75");
+      swp(".swiper76");
+      swp(".swiper78");
+      swp(".swiper79");
+      swp(".swiper81");
+      swp(".swiper82");
+    }, 2000);
+  </script>
+</html>
